@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="NoticeFile">
+
+	<!-- 공지사항글 파일 추가 -->
+	<insert id="insert" parameterType="noticeFileVO">
+		insert into tbl_notice_file
+		values(#{noticeFileName}, #{noticeFileRealname}, #{noticeNumber})
+	</insert>
+	
+	<!-- 파일 검색 -->
+	<select id="select" parameterType="_int" resultType="noticeFileVO">
+		select notice_file_name, notice_file_realname from tbl_notice_file where notice_number = #{noticeNumber} 
+	</select>
+	
+	<!-- 파일 삭제 -->
+	<delete id="delete" parameterType="_int">
+		delete from tbl_notice_file where notice_number = #{noticeNumber}
+	</delete>
+</mapper>

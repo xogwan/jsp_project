@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="localSpeciality">
+	<select id="selectSearch" parameterType="map" resultType="localSpecialityVO">
+		select sp_number, sp_image, sp_name, sp_location, sp_date
+		from tbl_local_speciality_product_info
+		order by sp_number desc
+		limit #{startRow}, #{rowCount}
+		
+	</select>
+	
+	<select id="selectCount" resultType="_int">
+		select count(sp_number) from tbl_local_speciality_product_info
+	</select>
+</mapper>

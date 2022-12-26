@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  background: rgba(253, 223, 223, 0.23);
+}
+
+div#wrapper {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 105;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  
+  width: 250px;
+  height: auto;
+  min-height: 99.6vh;
+  background-color: #f5c7bd;
+  border: 1px solid gray;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333333;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  word-break: keep-all;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #333333;
+}
+
+nav div#team-logo {
+  margin-left: 10px;
+  line-height: 65px;
+  font-family: 'Sunflower', sans-serif;
+  font-size: 19px;
+}
+
+div.menu-title {
+  margin: 35px 0 5px 11px;
+  color: #33333381;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+nav div.side-menu-contents {
+  font-size: 14px;
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav div.side-menu-contents:hover {
+  background: #ffbaaba2;
+}
+
+#side-menu,
+#side-menu ul,
+#side-menu ul li,
+#side-menu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#side-menu ul ul {
+  display: none;
+}
+
+#side-menu>ul>li>a {
+  padding: 20px;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 14px;
+  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+#side-menu ul li {
+  background: #f5c7bd;
+}
+
+#side-menu ul li:hover {
+  background: #ffbaaba2;
+}
+
+#side-menu ul ul li a {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+#side-menu ul ul li a {
+  cursor: pointer;
+  padding: 16px;
+  z-index: 1;
+  font-size: 13px;
+  background: #fee3dc;
+}
+
+#side-menu ul ul li:hover>a,
+#side-menu ul ul li.open>a,
+#side-menu ul ul li.active>a {
+  background: #fddbd3;
+}
+
+#side-menu ul ul li:first-child>a {
+  box-shadow: none;
+}
+
+#side-menu ul ul ul li a {
+  background: #fff1ed;
+  font-size: 13px;
+}
+
+#side-menu ul ul ul li a:hover {
+  background: #fdeae5;
+}
+
+#side-menu ul ul ul li a {
+  padding-left: 30px;
+}
+
+#side-menu ul ul li.sub-menu>a::after {
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 17.5px;
+}
+
+.toggleBtn:after {
+  content: '+';
+  font-weight: bold;
+  float: right;
+  color: #333333;
+}
+
+.toggleBtn2 {
+  float: right;
+  font-weight: bold;
+  color: #333333;
+}
+
+:root {
+  --nav-width: 250px;
+}
+
+/* 컨텐츠 시작 */
+div#container {
+  width: calc(100% - var(--nav-width));
+  margin-bottom: 20px;
+  float: right;
+}
+
+/* 헹더 */
+header {
+  position: fixed;
+  width: calc(100% - var(--nav-width));
+  height: 60px;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(182, 182, 182, 0.7);
+  box-shadow: 0.1px 0.1px 8px -5px #7c7c7c;
+  right: 0;
+  z-index: 1;
+
+  line-height: 60px;
+}
+
+header span {
+  font-size: 12px;
+  font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: rgb(97, 97, 97);
+}
+
+header span#admin-header-title {
+  margin-left: 20px;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+div#container header span.short{
+  letter-spacing: 3px;
+}
+
+header span#admin-mode { margin-left: 5px; }
+
+header span#userCount {
+  float: right;
+  margin-right: 17px;
+}
+
+header span#userCount strong {
+  font-size: 14px;
+  color: #000;
+}

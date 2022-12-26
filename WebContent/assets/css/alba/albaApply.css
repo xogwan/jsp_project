@@ -1,0 +1,419 @@
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+/* 바디 */
+body {
+    font-family: 'ONE-Mobile-Regular';
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font: 17px/1.5 "ONE-Mobile-Regular";
+    letter-spacing: -0.05em;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: inherit;
+}
+
+.wrap{
+    width: 100%;
+    position: relative;
+    margin: auto;
+    clear: both;
+}
+.sub_wrap{
+    font: 17px/1.5 "ONE-Mobile-Regular";
+    letter-spacing: -0.05em;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: inherit;
+}
+
+.sub_title{
+    padding: 4.706rem 0 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    bottom: 6.353rem;
+    height: 17.353rem;
+    z-index: 2;
+    background-image: url(https://www.rda.go.kr/young/file/imageView.do?fpath=78mfPU1tH5tpGdf2EjZQb0R3AXuZGhjU7I8pBv4Rl9tqEaXhOUrKyqO8iZWgudng&fname=mFFphUfLAB1Ng3Mg1ZV37SJqwwEzgE5GIwhDyL%2F6Nz9VBYOJAsth1MTks%2BecMj4rSFgVYwnGGTl6kLgmqqoWCw%3D%3D&fmime=Lg45aghPCGTl0b%2FVATARWg%3D%3D);
+}
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+    position : relative;
+}
+.sub_wrap .sub_title .inner {
+    position: relative;
+    width: 100%;
+    height: 15.353em;
+}
+.inner{
+    margin: 0 auto;
+}
+
+.title_left_box {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: relative;
+    width: 100%;
+}
+.snb .top{
+    display: inline-block;
+    line-height: normal;
+    font-weight: bold;
+    width: 290px;
+    font-size: 2.824rem;
+    color: #333;
+}
+.lgr_sub{
+    display: inline-block;
+    margin-left: 60px;
+}
+
+li .checkText:after {
+    content: '/';
+    margin: 0 1.176rem;
+    color: rgb(0,0,0,.5);
+}
+.sub_wrap .sub_title ul li {
+    float: left;
+    font-size: 0.882rem;
+}
+.lgr_ul li{
+    list-style: none;
+}
+
+.title_right_box{
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    vertical-align: top;
+}
+p{
+    margin-top: 4px;
+    margin-bottom: -16px;
+}
+.sub_content{
+    margin : 0;
+}
+.border_wrap{
+    position:relative;
+}
+#listForm{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    z-index: 0;
+}
+.subMenu{
+    width: 100%;
+}
+.listView{
+    top: 0.8rem;
+    text-align: right;
+    padding-left: 0;
+    display: inline-block;
+    float: right;
+
+}
+.btnGallery{
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btnList{
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.sort_list{
+    margin-top: 0px;
+    text-align: right;
+    display: inline-block;
+    float: right;
+    font-family: 'ONE-Mobile-Regular';
+}
+.sort_btn{
+    width: 140px;
+    height: 35px;
+    display: inline-block;
+    line-height: 30px;
+    border-radius: 5px;
+    background: #afafaf;
+    color: #fff;
+    padding: 0 10px;
+    font-size: 15px;
+    font-family: 'ONE-Mobile-Regular';
+}
+
+.programBtn span{
+    color: #003668;
+    font-weight: bold;
+}
+ul{
+    margin-left: -40px;
+    list-style: none;
+}
+li.left{
+    position: relative;
+    width: 49%;
+    height: 180px;
+    border: 1px solid #7fb069;
+    border-radius: 10px;
+    padding: 24px;
+    display: inline-block;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+li.right{
+    position: relative;
+    width: 49%;
+    height: 180px;
+    border: 1px solid #7fb069;
+    border-radius: 10px;
+    padding: 24px;
+    display: inline-block;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    float: right;
+}
+.info{
+    display: inline-block;
+    vertical-align: middle;
+}
+.info p{
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 17px;
+    position: relative;
+    padding: 0 6px;
+}
+.local{
+    color: #7fb069;
+}
+.local::before{
+    background: #7fb069;
+}
+.info p::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: -8px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+.local::after{
+    background: #e5efe1;
+}
+.info p::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 100%;
+    height: 0.8rem;
+    border-radius: 1.35rem;
+    z-index: -1;
+}
+.info .edu::before {
+    background: #e3a01d;
+}
+.edu::after {
+    background: #f9f3eb;
+}
+.edu{
+    color: #e3a01d;
+    font-weight: bold;
+}
+.middleInfo{
+    padding-left: 40px;
+}
+.info .progress {
+    color: #125ea4;
+}
+.progress::before {
+    background: #125ea4;
+}
+.progress::after {
+    background: #e9f1f8;
+}
+.title{
+    margin: 0px 0;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    max-height: 30px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+p.prd{
+    display: inline-block;
+}
+.num{
+    margin-left: 3px;
+    margin-right: 30px;
+    display: inline-block;
+}
+.num p{
+    margin-top: 47px;
+    margin-right: 20px;
+    display: inline-block;
+    font-size: 17px;
+}
+.title p{
+    margin-top: 20px;
+}
+.container {
+    max-width: 82.353rem;
+    margin: auto;
+    position: relative;
+}
+.inner {
+    width: 1400px;
+    margin: 0 auto;
+}
+.sub_wrap .sub_content .inner {
+    width: 100%;
+    float: right;
+}
+.board_wrap {
+    position: relative;
+}
+.board_wrap .board_cont {
+    position: relative;
+}
+.board_cont #listForm {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    z-index: 0;
+}
+.sub_wrap .sub_content .inner {
+    width: 100%;
+    float: right;
+}
+.sub01_con .k_result {
+    margin: auto;
+    margin-top: 0px;
+}
+.board_cont #listForm .asa_listView {
+    top: 0.8rem;
+    text-align: right;
+    padding-left: 0;
+    display: inline-block;
+    float: right;
+}
+.asa_listView .asa_btnGallery, .asa_listView .asa_btnList {
+    position: relative;
+    display: inline-block;
+    /* border: 1px solid #ccc; */
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    border: 0 none;
+    -webkit-tap-highlight-color: transparent;
+}
+.asa_listView .asa_btnList {
+    margin-left: 10px;
+}
+
+.sub01_con .k_result {
+    margin: auto;
+    margin-top: 0px;
+}
+.sub01_con .k_result .count span {
+    color: #003668;
+    font-weight: bold;
+}
+dl, ul, ol, menu, li {
+    list-style: none;
+}
+.sub01_con .k_result li {
+    position: relative;
+    width: 49%;
+    height: 180px;
+    border: 1px solid #7fb069;
+    border-radius: 10px;
+    padding: 24px;
+    display: inline-block;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.sub01_con .k_result li:hover {
+    border: 2px solid #7fb069;
+    box-shadow: 5px 5px 8px #d8e7d2;
+}
+
+.sub01_con .k_result li:nth-child(even) {
+    float: right;
+}
+button {
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    overflow: visible;
+    cursor: pointer;
+    
+}
+
+button.alba_write_btn { background: #464d77; }
+
+div.d-day { display: inline;}
+
+a.a_tag {
+    text-decoration: none;
+}
+
+span.secondMenu {
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+span.checkText {
+    float: right;
+    color: rgb(0,0,0,.5);
+    font-size: 0.941rem;
+}

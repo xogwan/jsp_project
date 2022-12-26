@@ -1,0 +1,10 @@
+table.mentor th.num { width: 7%; }
+table.mentor th.title { width: 18%; }
+table.mentor th.main { width: 9%; }
+table.mentor th.address { width: 10%; }
+table.mentor th.id { width: 9%; }
+table.mentor th.email { width: 15%; }
+table.mentor th.phone { width:  11%; }
+table.mentor th.file-check { width: 7%; }
+table.mentor th.date { width: 9%; }
+table.mentor th.delete { width: 5%; }

@@ -1,0 +1,342 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "one";
+    src: url("fonts/본문체/ONE\ Mobile\ Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+body {
+    font-family: 'one';
+}
+
+* { margin: 0;}
+a { color: #333; text-decoration: none;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font: 17px/1.5 "ONE-Mobile-Regular";
+    letter-spacing: -0.05em;
+    border-radius: 0px;
+    appearance: none;
+    font-size: inherit;
+}
+
+.wrap{
+    width: 100%;
+    position: relative;
+    margin: auto;
+    clear: both;
+}
+.sub_wrap{
+    font: 17px/1.5 "ONE-Mobile-Regular";
+    letter-spacing: -0.05em;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: inherit;
+}
+
+.sub_title{
+    padding: 4.706rem 0 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    bottom: 5.353rem;
+    height: 17.353rem;
+    z-index: 2;
+    background-image: url(https://www.rda.go.kr/young/file/imageView.do?fpath=78mfPU1tH5tpGdf2EjZQb0R3AXuZGhjU7I8pBv4Rl9tqEaXhOUrKyqO8iZWgudng&fname=l%2BFlhnD03GsJ%2Fchs5vcnWANjaPVA8jceO3zpgcD7G8yWklFi5FyBa5sbhA28X6QWCVj7vfrcTg1bL8qWZ5zq2A%3D%3D&fmime=Lg45aghPCGTl0b%2FVATARWg%3D%3D);
+}
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+    position : relative;
+}
+.sub_wrap .sub_title .inner {
+    position: relative;
+    width: 100%;
+    height: 15.353em;
+}
+.inner{
+    margin: 0 auto;
+}
+
+.title_left_box {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: relative;
+    width: 100%;
+}
+.snb .top{
+    display: inline-block;
+    line-height: normal;
+    font-weight: bold;
+    width: 300px;
+    font-size: 2.824rem;
+    color: #333;
+}
+.lgr_sub{
+    display: inline-block;
+    margin-left: 20px;
+}
+li.nowMenu:after {
+    content: '/';
+    margin: 0 1.176rem;
+    color: rgb(0,0,0,.5);
+}
+.sub_wrap .sub_title ul li {
+    float: left;
+    font-size: 0.882rem;
+}
+.lgr_ul li{
+    list-style: none;
+}
+.checkText{
+    color: #333;
+    font-weight: 600;
+}
+
+.title_right_box{
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    vertical-align: top;
+}
+.title_right_box div.requestImg {
+    width: 294px;
+    height: 252px;
+    background-image: url('/assets/images/myProgramApply/requestImg.png');
+    background-size: cover;
+}
+
+
+p{
+    margin-top: 4px;
+    margin-bottom: -16px;
+}
+.sort_btn{
+    width: 140px;
+    height: 35px;
+    display: inline-block;
+    line-height: 30px;
+    border-radius: 5px;
+    background: #afafaf;
+    color: #fff;
+    padding: 0 10px;
+    font-size: 15px;
+}
+ul{
+    margin-left: -40px;
+    list-style: none;
+}
+
+
+.info p{
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 17px;
+    position: relative;
+    padding: 0 6px;
+}
+.local{
+    color: #7fb069;
+}
+.local::before{
+    background: #7fb069;
+}
+.info p::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: -8px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+.local::after{
+    background: #e5efe1;
+}
+.info p::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 100%;
+    height: 0.8rem;
+    border-radius: 1.35rem;
+    z-index: -1;
+}
+.info .edu::before {
+    background: #e3a01d;
+}
+.edu::after {
+    background: #f9f3eb;
+}
+.edu{
+    color: #e3a01d;
+    font-weight: bold;
+}
+.middleInfo{
+    padding-left: 40px;
+}
+.info .progress {
+    color: #125ea4;
+}
+.progress::before {
+    background: #125ea4;
+}
+.progress::after {
+    background: #e9f1f8;
+}
+
+.num{
+    margin-left: 3px;
+    margin-right: 30px;
+    display: inline-block;
+}
+.num p{
+    margin-top: 47px;
+    margin-right: 20px;
+    display: inline-block;
+    font-size: 17px;
+}
+.title p{
+    margin-top: 20px;
+}
+.container {
+    max-width: 82.353rem;
+    margin: auto;
+    position: relative;
+}
+.inner {
+    width: 1400px;
+    margin: 0 auto;
+}
+.sub_wrap .sub_content .inner {
+    width: 100%;
+    float: right;
+}
+.board_wrap {
+    position: relative;
+}
+.board_wrap .board_cont {
+    position: relative;
+}
+.board_cont #listForm {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    z-index: 0;
+}
+
+p.count{
+	margin-left: -38px;
+}
+
+.sub_wrap .sub_content .inner {
+    width: 100%;
+    float: right;
+}
+.sub01_con .k_result {
+    margin: auto;
+    margin-top: 0px;
+}
+.board_cont #listForm .asa_listView {
+    top: 0.8rem;
+    text-align: right;
+    padding-left: 0;
+    float: right;
+}
+.asa_listView .asa_btnGallery, .asa_listView .asa_btnList {
+    position: relative;
+    display: inline-block;
+    /* border: 1px solid #ccc; */
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    border: 0 none;
+    -webkit-tap-highlight-color: transparent;
+}
+.asa_listView .asa_btnList {
+    margin-left: 10px;
+}
+.sort_list {
+    margin-top: 0px;
+    text-align: right;
+    float: right;
+    margin-right: 4px;
+}
+.sub01_con .k_result {
+    margin: auto;
+    margin-top: 0px;
+}
+.sub01_con .k_result .count span {
+    color: #003668;
+    font-weight: bold;
+}
+dl, ul, ol, menu, li {
+    list-style: none;
+}
+.sub01_con .k_result li {
+    position: relative;
+    width: 49%;
+    height: 180px;
+    border: 1px solid #7fb069;
+    border-radius: 10px;
+    padding: 24px;
+    display: inline-block;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+.sub01_con .k_result li:nth-child(even) {
+    float: right;
+}
+.paging {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+.page_btn.current_page {
+    border-color: #628861;
+    background: #628861;
+}
+.page_btn.current_page span {
+    color: #fff !important;
+}
+.page_btn {
+    display: inline-block;
+    width: 30px;
+    vertical-align: middle;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #666;
+}
+button {
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    overflow: visible;
+    cursor: pointer;    
+}
+
+a.programDiv {
+    margin-right: 20px;
+}

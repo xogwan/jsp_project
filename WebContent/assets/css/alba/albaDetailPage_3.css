@@ -1,0 +1,309 @@
+@font-face {
+    font-family: "one";
+    src: url("fonts/본문체/ONE\ Mobile\ Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+body {
+		overflow-x: hidden;
+    font-family: 'one';
+    margin-left: 0px;
+}
+.sub_title{
+    width: 100vw;
+    background-image: url(https://www.rda.go.kr/young/file/imageView.do?fpath=78mfPU1tH5tpGdf2EjZQb0R3AXuZGhjU7I8pBv4Rl9tqEaXhOUrKyqO8iZWgudng&fname=mFFphUfLAB1Ng3Mg1ZV37SJqwwEzgE5GIwhDyL%2F6Nz9VBYOJAsth1MTks%2BecMj4rSFgVYwnGGTl6kLgmqqoWCw%3D%3D&fmime=Lg45aghPCGTl0b%2FVATARWg%3D%3D);
+    padding: 4.706rem 0 0;
+    z-index: 2;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    bottom: 6.353rem;
+    position: relative;
+    height: 17.353rem;
+}
+.container {
+    height: 100%;
+    max-width: 82.353rem;
+    margin: auto;
+    position: relative;
+}
+.sub_title .inner {
+    position: relative;
+    width: 100%;
+    height: 15.353em;
+    margin: 0 auto;
+}
+.title_left_box {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: relative;
+    width: 100%;
+}
+nav.snb{
+    display: block;
+}
+
+div.lgr_snb {
+    display: inline-block;
+    margin-left: 20px;
+    width: 255px;
+}
+
+.snb .top{
+    letter-spacing: -0.05em;
+    line-height: normal;
+    font-weight: bold;
+    font-size: 2.824rem;
+    color: #333;
+    width: 290px;
+    /* margin-top: 2.941rem; */
+}
+ul.lgr_ul{
+    font-family: 'one';
+    list-style: none;
+}
+.sub_wrap .sub_title ul li{
+    list-style: none;
+    font-size: 0.882rem;
+}
+li.nowMenu{
+    float: left;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.941rem;
+}
+li.nowMenu::after{
+    content: '/';
+    margin: 0 1.176rem;
+    color: rgb(0,0,0,.5);
+}
+.lgr_ul li{
+    font-size: 0.941rem;
+    letter-spacing: -0.05em;
+}
+.secondMenu{
+    float: right;
+    color: rgb(0,0,0,.5);
+    font-size: 0.941rem;
+}
+.title_right_box {
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    vertical-align: top;
+}
+
+body {
+    font-family: 'one';
+    margin-left: 0px;
+}
+.conwrap{
+    max-width: 82.353rem;
+    margin : 0 auto;
+    text-align: center;
+    padding: 40px 40px 30px;
+    height: 500px;
+    margin-top: 15px;
+    background-image: url(http://returnfarm.gwd.go.kr/image/counseling/mentoring-bg3.gif);
+}
+
+.process{
+    width: 1000px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    margin-left: 138px;
+}
+.contit{
+    font-size: 18px;
+    font-weight: 700;
+    color: #534741;
+    position: relative;
+    padding-bottom: 105px;
+}
+.contit::before{
+        position: absolute;
+        left: 50%;
+        margin-left: -30px;
+        bottom: 80px;
+        content: "";
+        width: 70px;
+        height: 1px;
+        background: #736357;
+}
+.main_guide{
+    display: block;
+    margin: 0 auto;
+    background: url(http://returnfarm.gwd.go.kr/image/counseling/mentoring-bg1.gif) no-repeat left top;
+    padding: 75px 20px 96px;
+    text-align: center;
+    color: #fff;
+}
+.clearfix{
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+}
+.stepnum{
+    height: 58px;
+    width: 69px;
+    background-image: url(http://returnfarm.gwd.go.kr/image/counseling/mentoring-stepbg.png);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%; 
+    top: -36px; 
+    margin-left: -30px;
+    padding-top: 11px;
+}
+.conarea {
+    background: #fff;
+    padding: 50px 10px 60px;
+    min-height: 130px;
+}
+.clearfix li {
+    display: list-item;
+    width: 30%;
+    padding: 0 10px;
+    position: relative;
+}
+
+@font-face {
+    font-family: 'one';
+    src: url("fonts/본문체/ONE\ Mobile\ Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+.main_wrap{
+    width: 82.353rem;
+    margin: 0 auto;
+}
+p.tit{
+    font-size: 30px;
+    font-weight: 700;
+}
+.desc::before{
+    position: absolute;
+    content: "";
+    left: 48%;
+    top: 42px;
+    width: 4%;
+    height: 1px;
+    background: #f7941d;
+}
+p.desc{
+    padding-top: 80px;
+    font-size: 16px;
+    position: relative;
+    line-height: 20px;
+}
+p.desc strong{
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.sub_guide{
+    padding: 118px 0;
+}
+.stepnum strong{
+    font-size: 30px;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+}
+.conarea{
+    line-height: 1.5;
+    color: #666666;
+    letter-spacing: 0;
+    -webkit-text-size-adjust: none;
+}
+.conarea strong {
+    display: block;
+    font-size: 18px;
+    color: #464646;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.view_tit{
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 80px;
+    height: 80px;
+    border-top: 3px solid #666666;
+    background-color: #e8f1ef;
+    margin: 0 auto 40px;
+    width: 82.353rem;
+
+}
+
+
+#lastStep{
+    background-size: cover;
+    height: 90px;
+    width: 101px;
+    top: -61px;
+    left: 44%;
+    font-size: 24px;
+}
+
+#lastStep strong{
+    font-size: 44px;
+}
+
+.apply_finish{
+    margin: 0 auto;
+    width: 82.353rem;
+    text-align: center;
+}
+.h2{
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 76px;
+    margin-top: 30px;
+}
+.txt{
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: bold ;
+}
+
+.returnlist{
+	cursor: pointer;
+}
+.checkText{
+    color: #333;
+    font-weight: 600;
+}
+.nowMenu span{
+    color: rgb(0,0,0,.5);
+}
+
+span.secondMenu {
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+span.checkText {
+    float: left;
+    color: rgb(0,0,0,.5);
+    font-size: 0.941rem;
+}
+a.a_tag{
+	text-decoration: none;
+}
+a.a_return{
+	text-decoration: none;
+	color: #333;
+}
+
+a.a_return:hover{
+	color: #4b812c;
+}

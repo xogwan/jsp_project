@@ -1,0 +1,44 @@
+div.contents-bottom {
+    position: relative;
+}
+
+div#container .chart-no {
+    margin-top: 95px;
+}
+
+th.num { width: 7%; }
+th.title { width: 22%; }
+th.content { width: 30%; }
+th.file-check { width: 7%; }
+th.date { width: 15%; }
+th.hits { width:  7%; }
+th.revise, th.delete { width: 6%; }
+
+td.revise, td.delete { padding: 0 0.3vw; }
+
+td.revise input[type="button"]:hover { background: #e1e2e4;}
+td.delete input[type="button"] { background: #f5c7bd; }
+td.delete input[type="button"]:hover { background: #eeb6aa; }
+
+div#write {
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+}
+
+div#write input[type="button"] {
+    width: 120px;
+    height: 30px;
+    background: #747474;
+    border: 0;
+    cursor: pointer;
+    
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+div#write input[type="button"]:hover {
+    background: #5e5e5e;
+
+}

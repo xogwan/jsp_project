@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/** FOOTER */
+
+body {
+    margin: 0;
+}
+footer.footer {
+    width: 100%;
+    overflow: hidden;
+    background-color: #3b6a39;
+}
+
+footer.footer .bottom_link {
+    width: 82.353rem;
+    text-align: left;
+    border-bottom: 0.059rem solid rgba(255, 225, 225, 0.2);
+    padding: 1.176rem 0;
+    margin: auto;
+}
+
+footer.footer .bottom_link ul {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-top: 3px;
+}
+
+footer.footer .bottom_link ul li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+footer.footer .bottom_link ul li+li::before {
+    content: '|';
+    margin: 0 0.882rem;
+    color: #fff;
+}
+
+footer.footer .bottom_link ul li a.footer_a {
+    font-family: 'ONE-Mobile-Regular';
+    font-size: 0.824rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer.footer .address {
+    width: 82.353rem;
+    position: relative;
+    padding: 1.471rem 0;
+    margin: auto;
+}
+
+footer.footer .address ul {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+footer.footer .address ul li {
+    float: left;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    font-size: 0.824rem;
+    color: #fff;
+    font-family: 'ONE-Mobile-Regular';
+}
+
+footer.footer .address ul li + li {
+    margin-left: 10px;
+}
+
+footer.footer .address p.copy {
+    font-size: 0.824rem;
+    color: #fff;
+    font-family: 'Play', sans-serif;
+    margin: 0;
+    padding-top: 4px;
+}
+
+footer.footer .bottom_link .logo {
+    width: 7.412rem;
+    height: 1.765rem;
+    left: 0;
+    position: relative;
+    display: inline-block;
+}
+
+footer.footer .bottom_link .footer_container {
+    margin: 0;
+    max-width: 82.353rem;
+    position: relative;
+}
+
+footer.footer .address .footer_container {
+    margin: 0;
+}

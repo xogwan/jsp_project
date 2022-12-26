@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MyPage">
+
+<!--로그인 한 사용자가 멘토가 아닐 때 -->
+	<select id="selectNotMentor" parameterType="_int" resultType="memberVO">
+		select
+			member_name,
+			member_grade,
+			member_location,
+			member_id,
+			member_phone_number
+		from
+			tbl_member
+		where
+			member_number = #{memberNumber}
+	</select>
+
+<!--로그인 한 사용자가 멘토일 때 -->
+	<select id="selectMyPage" parameterType="_int" resultType="memberVO">
+		select 
+			member_name,
+			member_grade,
+			member_location,
+			member_id,
+			member_phone_number
+		from 
+			tbl_member mb join tbl_mentor mt
+		on 
+			mb.member_number = mt.member_number
+		where 
+			mb.member_number = #{memberNumber}
+	</select>
+	
+	
+<!-- 회원정보 수정  -->
+	<update id="updateMyPage" parameterType="memberVO">
+		update tbl_member
+		set 
+			member_grade = #{memberGrade} , 
+			member_password = #{memberPassword} , 
+			member_phone_number = #{memberPhoneNumber} , 
+			member_email = #{memberEmail} , 
+			member_location = #{memberLocation}
+		where 
+			member_number = #{memberNumber}
+	</update>
+	
+<!--회원 탈퇴 -->	
+	<delete id="deleteMember" parameterType="memberVO">
+		delete from tbl_member
+		where member_number = #{memberNumber} and member_password = #{memberPassword}
+	</delete>
+	
+<!--입력받은 패스워드가 DB에 있는지 확인  -->
+	<select id="selectDeletePw" parameterType="String" resultType="_int">
+		select count(member_number)
+		from tbl_member
+		where member_password = #{memberPassword}
+	</select>
+	
+<!--일반 사용자일때 내가 신청한 프로그램 중 가장 최근에 신청한 프로그램 1개 검색-->
+	<select id="selectRecentPrograms" parameterType="_int" resultType="programVO">
+		select 
+			program_name,
+			program_start_date,
+			tp.program_number 
+		from tbl_program tp 
+		join tbl_member_program tmp
+		on tp.program_number = tmp.program_number
+		where tmp.member_number = #{memberNumber}
+		order by tp.program_start_date desc
+		limit 1
+	</select>
+	
+<!--일반 사용자일때 내가 신청한 알바 중 가장 최근에 신청한 알바 1개 검색-->
+	<select id="selectRecentAlbas" parameterType="_int" resultType="albaVO">
+		select 
+			alba_name,
+			alba_start_date,
+			ta.alba_number
+		from tbl_alba ta 
+		join tbl_member_alba tma
+		on ta.alba_number = tma.alba_number
+		where tma.member_number = #{memberNumber}
+		order by ta.alba_start_date desc
+		limit 1
+	</select>
+	
+<!-- 농장주일때 가장 최근에 등록한 프로그램 1개 검색 -->	
+	<select id="selectFarmerProgram" parameterType="_int" resultType="programVO">
+		select 
+			program_name,
+			program_date,
+			program_number
+		from tbl_program
+		where member_number = #{memberNumber}
+		order by program_date desc
+		limit 1
+	</select>
+	
+<!-- 농장주일때 가장 최근에 등록한 알바 1개 검색 -->	
+	<select id="selectFarmerAlba" parameterType="_int" resultType="albaVO">
+		select 
+			alba_name,
+			alba_date,
+			alba_number
+		from tbl_alba
+		where member_number = #{memberNumber}
+		order by alba_date desc
+		limit 1
+	</select>
+	
+<!--내가 신청한 프로그램 리스트 검색 -->	
+	<select id="selectProgram" parameterType="map" resultType="programVO">
+		select 
+			tmp.program_number,
+			program_name,
+			program_start_date,
+			program_location,
+			program_apply_start_date,
+			program_apply_end_date,
+			program_view_count
+		from tbl_program tp 
+		join tbl_member_program tmp on tp.program_number = tmp.program_number
+		where tmp.member_number = #{memberNumber} 
+		limit #{startRow} , #{rowCount};                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+	</select>
+
+<!--내가 신청한 프로그램 총 개수 -->
+	<select id="selectProgramCount" parameterType="_int" resultType="_int">
+		select 
+			count(program_apply_number) 
+		from tbl_program tp join tbl_member_program tmp
+		on tp.program_number = tmp.program_number
+		where tmp.member_number = #{memberNumber} 
+	</select>
+
+	
+<!--내가 신청한 알바 리스트 검색 -->	
+	<select id="selectAlba" parameterType="map" resultType="albaVO">
+		select 
+		tma.alba_number,
+			alba_name,
+			alba_start_date,
+			alba_location,
+			alba_apply_start_date,
+			alba_apply_end_date,
+			alba_view_count
+		from tbl_alba ta
+		join tbl_member_alba tma on ta.alba_number = tma.alba_number
+		where tma.member_number = #{memberNumber} 
+		limit #{startRow} , #{rowCount}                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+	</select>
+
+	<!-- 내가 작성한 알바 리스트 조회 -->
+	<select id="selectWriteAlba" parameterType="map" resultType="albaVO">
+		select
+			alba_name,
+			alba_start_date,
+			alba_location,
+			alba_apply_start_date,
+			alba_apply_end_date,
+			alba_view_count,
+			alba_number
+		from tbl_alba ta join tbl_member tm
+		on tm.member_number = #{memberNumber}
+		limit #{startRow} , #{rowCount}
+	</select>
+		
+		<!-- 내가 작성한 알바 리스트 총 개수 -->
+	<select id="selectWriteAlbaCount" parameterType="_int" resultType="_int">
+		select count(tm.member_number)
+		from tbl_member tm join tbl_alba ta
+		on tm.member_number = ta.member_number
+		where tm.member_number = #{memberNumber}
+	</select>
+	
+	<!-- 내가 작성한 프로그램 리스트 조회 -->
+	<select id="selectWriteProgram" parameterType="map" resultType="programVO">
+		select
+			program_name,
+			program_start_date,
+			program_location,
+			program_apply_start_date,
+			program_apply_end_date,
+			program_view_count,
+			program_number
+		from tbl_program tp join tbl_member tm
+		on tm.member_number = #{memberNumber}
+		limit #{startRow} , #{rowCount};
+	</select>
+	
+		<!-- 내가 작성한 프로그램 리스트 총 개수 -->
+	<select id="selectWriteProgramCount" parameterType="_int" resultType="_int">
+		select count(tm.member_number)
+		from tbl_member tm join tbl_program tp
+		on tm.member_number = tp.member_number
+		where tm.member_number = #{memberNumber}
+	</select>
+		
+<!--내가 신청한 알바 총 개수 -->	
+	<select id="selectAlbaCount" parameterType="_int" resultType="_int">
+		select 
+			count(alba_apply_number)
+		from tbl_alba ta 
+		join tbl_member_alba tma
+		on ta.alba_number = tma.alba_number
+		where tma.member_number = #{memberNumber} 
+	</select>
+	
+<!--내가 작성한 커뮤니티 게시판 리스트 검색 -->	
+	<select id="selectMyWrite" parameterType="map" resultType="communityDTO">
+		select 
+			tc.community_number, 
+			tc.community_title, 
+			tcf.community_file_name, 
+			tm.member_id, 
+			tc.community_date, 
+			tc.community_view_count
+		from tbl_community tc left outer 
+		join tbl_community_file tcf
+		on tc.community_number = tcf.community_number
+		join tbl_member tm
+		on tc.member_number = tm.member_number
+		where tc.member_number = #{memberNumber}
+		order by tc.community_number desc
+		limit #{startRow}, #{rowCount}
+	</select>
+	
+<!--내가 작성한 커뮤니티 게시판 글 총 개수  -->	
+	<select id="selectWriteCount" parameterType="_int" resultType="_int">
+		select 
+			count(community_number)
+		from tbl_community
+		where member_number = #{memberNumber}
+	</select>
+	
+<!--가장 최근에 작성한 커뮤니티 게시판 글 2개 -->	
+	<select id="selectRecentWrite" parameterType="_int" resultType="communityVO">
+		select 
+			tc.community_title,
+			tc.community_date
+		from tbl_community tc left outer 
+		join tbl_community_file tcf
+		on tc.community_number = tcf.community_number
+		join tbl_member tm
+		on tc.member_number = tm.member_number
+		where tc.member_number = #{memberNumber}
+		order by tc.community_number desc
+		limit 2
+	</select>
+	
+</mapper>

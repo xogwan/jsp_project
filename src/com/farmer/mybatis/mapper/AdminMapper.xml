@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Admin">
+
+
+<!-- 메인 최근 가입한 사용자 목록-->
+	<select id="mainUserSelect" parameterType="map" resultType="mainUserVO">
+		select member_name, member_email, member_phone_number, member_location, member_join_date
+		from tbl_member
+		order by member_join_date desc
+		limit 0, 5
+	</select>
+	
+<!-- 메인 댓글 관리 리스트 -->
+ 	<select id="mainReplySelect" parameterType="map" resultType="mainReplyVO">
+			select m.member_name, reply_content, reply_date
+			from tbl_reply r join tbl_member m 
+			on r.member_number = m.member_number
+			order by reply_date desc
+			limit 0, 5
+	</select>
+	
+<!--메인 멘토 홍보 리스트 -->
+ 	<select id="mainMentorSelect" parameterType="map" resultType="mainMentorVO">
+			select mentor_location, mentor_crops, mentor_name, mentor_date
+			from tbl_mentor
+			order by mentor_date desc 
+			limit 0,5
+	</select>
+	
+<!-- 메인 소통공간 리스트 -->
+	<select id="mainCommunitySelect" parameterType="map" resultType="mainCommunityVO">
+		select community_title, community_date 
+		from tbl_community
+		order by community_date desc
+		limit 0, 5
+	</select>
+
+
+
+<!-- 사용자관리 유저목록 띄우기(알바, 프로그램 신청 수 생략함) -->
+	<select id="userSelectAll" parameterType="map" resultType="memberVO">
+		select member_number, member_id, member_email, member_phone_number, member_name, member_grade, member_location
+		from tbl_member
+		order by member_number desc limit #{startRow}, #{rowCount}
+	</select>
+	
+<!-- 사용자관리 검색기능 -->
+ 	<select id="findAllSearchBy" parameterType="adminMemberDTO" resultType="memberVO">
+		select member_id, member_email, member_name, member_phone_number from tbl_member
+		where 
+		<trim prefixOverrides="OR">
+			<foreach item="type"  collection="types">
+				<trim prefix="OR">
+					<choose>
+						<when test="type == 'i'.toString()">
+							member_id = #{keyword}
+						</when>
+						<when test="type == 'e'.toString()">
+							member_email = #{keyword}
+						</when>
+						<when test="type == 'n'.toString()">
+							member_name = #{keyword}
+						</when>
+						<otherwise>
+							member_phone_number = #{keyword}
+						</otherwise>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</select> 
+
+	
+	
+<!-- 사용자관리 db에 있는 유저 수 count -->
+	<select id="selectCount" resultType="_int">
+		select count(member_number) from tbl_member
+	</select>
+	
+<!-- 사용자관리 탈퇴버튼 클릭 시 db데이터 삭제 -->
+	<delete id="delete" parameterType="_int">
+		delete from tbl_member
+		where member_number = #{memberNumber}
+	</delete>
+	
+<!-- 사용자관리 검색 부분(보류) -->
+
+<!-- 프로그램 지원자 정보리스트(SELECT) -->
+	<select id="programSelectAll" resultType="adminProgramVO">
+		<!-- select program_number, program_name, program_date, tm.member_id
+		from tbl_program tp join tbl_member tm
+		on tp.member_number = tm.member_number -->
+		select p1.apply_date, p1.member_id, tp.program_number, tp.program_name  from
+		(select tmp.member_number, tmp.apply_date, tm.member_id from tbl_member_program tmp join tbl_member tm 
+		on tmp.member_number = tm.member_number) p1 join tbl_program tp
+		on p1.member_number = tp.member_number
+		order by program_number desc limit #{startRow}, #{rowCount}
+	</select>
+	
+	
+<!-- 프로그램관리 지원자 Id로 유저 수 count -->
+	<select id="selectIdCount" resultType="_int">
+		select count(p1.member_id) from
+		(select tmp.member_number, tmp.apply_date, tm.member_id from tbl_member_program tmp join tbl_member tm 
+		on tmp.member_number = tm.member_number) p1 join tbl_program tp
+		on p1.member_number = tp.member_number
+	</select>
+	
+	
+<!-- 농촌 프로그램 글 관리 목록 리스트 조회 -->
+	<select id="programListAll" resultType="programVO">
+		select program_number, program_name, program_location, program_apply_start_date, program_apply_end_date, 
+		program_recruited_count, program_recruited_total_count, program_date  
+		from tbl_program
+		order by program_number desc limit #{startRow}, #{rowCount}
+	</select>
+	
+<!-- 농촌 프로그램 수 -->
+	<select id="selectProgramCount" resultType="_int">
+		select count(program_number) from tbl_program
+	</select>
+
+<!-- 농촌 프로그램 글 삭제버튼 클릭 시 db데이터 삭제 -->
+	<delete id="deleteProgram" parameterType="_int">
+		delete from tbl_program
+		where program_number = #{programNumber}
+	</delete>
+	
+<!-- 알바 지원자 목록 리스트 -->
+	<select id="albaUserSelectAll" resultType="adminAlbaVO">
+		select a1.apply_date, a1.member_id, ta.alba_number, ta.alba_name  from
+		(select tma.member_number, tma.apply_date, tm.member_id from tbl_member_alba tma join tbl_member tm 
+		on tma.member_number = tm.member_number) a1 join tbl_alba ta
+		on a1.member_number = ta.member_number
+		order by alba_number desc limit #{startRow}, #{rowCount}
+	</select>
+	
+<!-- 알바 지원자 Id로 유저 수 count -->
+	<select id="selectIdCounta" resultType="_int">
+		select count(a1.member_id)  from
+		(select tma.member_number, tma.apply_date, tm.member_id from tbl_member_alba tma join tbl_member tm 
+		on tma.member_number = tm.member_number) a1 join tbl_alba ta
+		on a1.member_number = ta.member_number
+	</select>
+	
+<!-- 알바 글관리 글 목록 수 -->
+	<select id="albaListAll" resultType="albaVO">
+		select alba_number, alba_name, alba_location, alba_apply_start_date, alba_apply_end_date, 
+		alba_recruited_count, alba_recruited_total_count, alba_date  
+		from tbl_alba
+		order by alba_number desc limit #{startRow}, #{rowCount}
+	</select>
+	
+<!-- 농촌 알바 수 -->
+	<select id="selectAlbaCount" resultType="_int">
+		select count(alba_number) from tbl_alba
+	</select>
+	
+<!-- 농촌 알바 글 삭제버튼 클릭 시 db데이터 삭제 -->
+	<delete id="deleteAlba" parameterType="_int">
+		delete from tbl_alba
+		where alba_number = #{albaNumber}
+	</delete>
+	
+	
+<!-- 공지사항 글 목록 가져오기(공지 관리) -->
+	<select id="noticeListAll" resultType="adminNoticeVO">
+		select notice_number, notice_title, notice_content, notice_date, notice_view_count 
+		from tbl_notice
+		order by notice_number desc limit #{startRow}, #{rowCount}
+	</select>
+	
+<!-- 공지사항 글 수 -->
+	<select id="noticeCount" resultType="_int">
+		select count(notice_number) from tbl_notice
+	</select>
+	
+<!-- 공지사항 글 삭제 -->
+	<delete id="deleteNotice" parameterType="_int">
+		delete from tbl_notice
+		where notice_number = #{noticeNumber}
+	</delete>
+	
+	
+<!-- 공지사항 글 작성하기 -->
+	<insert id="write" parameterType="noticeVO">
+		insert into tbl_notice (notice_title, notice_content, member_number)
+		values(#{noticeTitle}, #{noticeContent}, #{memberNumber})
+	</insert>
+	
+<!-- 가장 최신 게시글 번호 -->
+	<select id="selectCurrentSequence" resultType="_int">
+		select last_insert_id()
+	</select>
+
+	
+	
+	
+	
+<!-- 멘토 리스트 불러오기 -->
+	<select id="mentorList" resultType="adminMentorVO">
+		select mentor_number, mentor_title, mentor_crops, mentor_location, m.member_id, mentor_email, mentor_phone_number, mentor_image, mentor_date
+		from tbl_mentor mt join tbl_member m
+		on mt.member_number = m.member_number
+		order by mentor_number desc limit #{startRow}, #{rowCount}
+	</select>
+<!-- 멘토 리스트 삭제하기 -->
+	<select id="mentorCount" resultType="_int">
+		select count(mentor_number) from tbl_mentor
+	</select>
+	
+<!-- 농촌 알바 글 삭제버튼 클릭 시 db데이터 삭제 -->
+	<delete id="deleteMentor" parameterType="_int">
+		delete from tbl_mentor
+		where mentor_number = #{mentorNumber}
+	</delete>
+	
+<!-- 소통공간 관리 커뮤니티 갖고오기 -->
+	<select id="communityList" resultType="adminCommunityVO">
+		select community_number, community_title, community_content, m.member_id, community_date,  community_view_count
+		from tbl_community c join tbl_member m
+		on c.member_number = m.member_number
+		order by community_number desc limit #{startRow}, #{rowCount}
+	</select>
+	
+<!-- 소통공간 글 목록 수 -->
+	<select id="communityCount" resultType="_int">
+		select count(community_number) from tbl_community
+	</select>
+	
+<!-- 소통공간 글 삭제버튼 클릭 시 db데이터 삭제 -->
+	<delete id="deleteCommunity" parameterType="_int">
+		delete from tbl_community
+		where community_number = #{CommunityNumber}
+	</delete>
+	
+<!-- 댓글 목록 가져오기 -->	
+	<select id="replyList" resultType="adminReplyVO">
+		select reply_number, reply_content, m.member_id, reply_date, community_number
+		from tbl_reply r join tbl_member m
+		on r.member_number = m.member_number
+		order by reply_number desc limit #{startRow}, #{rowCount}
+	</select>
+	
+<!-- 댓글 목록 수 -->
+	<select id="replyCount" resultType="_int">
+		select count(reply_number) from tbl_reply
+	</select>
+	
+<!--  댓글 삭제버튼 클릭 시 db데이터 삭제 -->
+	<delete id="deleteReply" parameterType="_int">
+		delete from tbl_reply
+		where reply_number = #{ReplyNumber}
+	</delete>
+	
+	
+	
+	
+	
+</mapper>

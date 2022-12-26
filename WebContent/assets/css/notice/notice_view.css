@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font: 17px/1.5 "ONE-Mobile-Regular";
+    letter-spacing: -0.05em;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: inherit;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+ul li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+}
+
+.contentfullwrap {
+    position: relative;
+    width: 100%;
+}
+
+.contentwrap {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.base_boardwrap {
+    clear: both;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.base_boardview table thead {
+    font-size: 13px;
+    font-weight: 400;
+    color: #3d3d3d;
+    border-top: 2px solid #565656;
+    border-bottom: 1px solid #a5a4a4;
+    background: #ffffff;
+}
+
+.base_boardview table thead tr th.title {
+    font-size: 21px;
+    font-weight: 500;
+    text-align: left;
+    padding: 18px 13px;
+    letter-spacing: -0.08em;
+    line-height: 24px;
+}
+
+.base_boardview table thead tr.datatext {
+    font-size: 14px;
+    color: #797878;
+    font-weight: 400;
+    padding: 20px;
+    border-top: 1px solid #eaeaea;
+}
+
+.base_boardview table thead tr td.datatext {
+    padding: 12px 15px;
+}
+
+.base_boardview table thead tr td.datatext div.datatext_l {
+    float: left;
+    line-height: 30px;
+}
+
+.base_boardview table thead tr td.datatext ul.datatext_r {
+    float: right;
+    text-align: right;
+}
+
+.base_boardview table thead tr td.datatext ul.datatext_r li {
+    float: left;
+    line-height: 30px;
+}
+
+ul.datatext_r>li+li:before {
+    content: '|';
+    margin: 0 1.176rem;
+    color: rgb(0, 0, 0, .5);
+}
+
+.base_boardview table tbody tr td {
+    padding: 24px 20px;
+}
+
+.base_boardview table tbody tr td.textarea {
+    word-break: break-all;
+    white-space: pre-line;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 16px;
+    color: #6b6b6b;
+    line-height: 140%;
+    text-align: left;
+    font-weight: 400;
+}
+
+.base_boardview table tbody tr.file {
+    border-bottom: none;
+    background-color: #fbfbfb;
+    border-top: 1px solid #dcdcdc;
+    color: #5b5b5b;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.base_boardview table tbody tr td.tblpd01 {
+    padding: 17px 20px;
+}
+
+.base_boardview table tbody tr.file a {
+    color: #5b5b5b;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    color: blue;
+}
+
+.mt25 {
+    margin-top: 25px !important;
+}
+
+.te_right {
+    text-align: right;
+}
+
+.iron-action {
+    display: inline-block;
+    color: #ffffff;
+    background: #464d77;
+    border-radius: 20px;
+    padding: 0px 15px;
+    font-size: 16px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    height: 30px;
+}
+
+
+
+
+

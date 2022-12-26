@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Reply">
+	<!-- 게시글 번호에 해당하는 댓글 전체 출력 -->
+	<select id="selectAll" parameterType="_int" resultType="replyDTO">
+		select re.reply_number, tm.member_id, tm.member_number, re.reply_date, re.reply_content
+		from tbl_reply re join tbl_member tm
+		on re.member_number = tm.member_number
+		where re.community_number = #{communityNumber}
+		order by reply_date desc
+	</select>
+	
+	<!-- 댓글 삽입 -->
+	<insert id="insert" parameterType="replyVO">
+		insert into tbl_reply (community_number, reply_content, member_number)
+		values(#{communityNumber}, #{replyContent}, #{memberNumber});
+	</insert>
+	
+	<!-- 댓글 수정 -->
+	<update id="update" parameterType="replyVO">
+		update tbl_reply
+		set reply_content=#{replyContent}
+		where reply_number=#{replyNumber}
+	</update>
+	
+	<!-- 댓글 삭제 -->
+	<delete id="delete" parameterType="_int">
+		delete from tbl_reply where reply_number = #{replyNumber}
+	</delete>
+</mapper>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Community">
+	<!-- 게시글 작성 -->
+	<insert id="write" parameterType="communityVO">
+		insert into tbl_community (community_title, community_content, member_number)
+		values(#{communityTitle}, #{communityContent}, #{memberNumber})
+	</insert>
+	
+	<!-- 게시글 전체 조회(페이징까지) -->
+	<select id="selectAll" parameterType="map" resultType="communityDTO">
+		select tc.community_number, tc.community_title, tcf.community_file_name, tm.member_id, tc.community_date, tc.community_view_count
+		from tbl_community tc left outer join tbl_community_file tcf
+		on tc.community_number = tcf.community_number
+		join tbl_member tm
+		on tc.member_number = tm.member_number
+		order by tc.community_number desc limit #{startRow}, #{rowCount}
+	</select>
+	
+	<!-- 게시글 전체 개수 확인 -->
+	<select id="selectCnt" resultType="_int">
+		select count(community_number) from tbl_community
+	</select>
+	
+	<!-- 게시글 상세정보 -->
+	<select id="select" parameterType="_int" resultType="communityDTO">
+		select tc.community_number, tc.community_title, tc.community_date, tm.member_id, tm.member_number, tc.community_view_count, tc.community_content
+		from tbl_community tc join tbl_member tm
+		on tc.member_number = tm.member_number
+		where tc.community_number = #{communityNumber}
+	</select>
+	
+	<!-- 게시글 카운트(title 카운트) -->
+	<select id="searchCntTitle" parameterType="string" resultType="_int">
+		select count(community_title) from tbl_community
+		where community_title like concat ('%', #{communityTitle}, '%')
+	</select>
+	
+	<!-- 게시글 카운트(content 카운트) -->
+	<select id="searchCntContent" parameterType="string" resultType="_int">
+		select count(community_title) from tbl_community
+		where community_Content like concat ('%', #{communityContent}, '%')
+	</select>
+	
+	<!-- 게시글 카운트(title+content 카운트) -->
+	<select id="searchCntTitleContent" parameterType="communityDTO" resultType="_int">
+		select count(community_title) from tbl_community
+		where community_title like concat ('%', #{communityTitle}, '%') or community_content like concat('%', #{communityContent}, '%')
+	</select>
+	
+	<!-- 게시글 카운트(writer 카운트) -->
+	<select id="searchCntWriter" parameterType="string" resultType="_int">
+		select count(tc.community_number)
+		from tbl_community tc join tbl_member tm
+		on tc.member_number = tm.member_number
+		where member_id = #{memberId};
+	</select>
+	
+	<!-- 게시글 검색(제목) -->
+	<select id="searchTitle" parameterType="map" resultType="communityDTO">
+		select tc.community_number, tc.community_title, tcf.community_file_name, tm.member_id, tc.community_date, tc.community_view_count
+		from tbl_community tc left outer join tbl_community_file tcf
+		on tc.community_number = tcf.community_number
+		join tbl_member tm
+		on tc.member_number = tm.member_number
+		where community_title like concat ('%', #{communityTitle}, '%')
+		order by tc.community_number desc limit #{startRow}, #{rowCount}
+	</select>
+	
+	<!-- 게시글 검색(내용) -->
+	<select id="searchContent" parameterType="map" resultType="communityDTO">
+		select tc.community_number, tc.community_title, tcf.community_file_name, tm.member_id, tc.community_date, tc.community_view_count
+		from tbl_community tc left outer join tbl_community_file tcf
+		on tc.community_number = tcf.community_number
+		join tbl_member tm
+		on tc.member_number = tm.member_number
+		where community_title like concat ('%', #{communityTitle}, '%') or community_content like concat('%', #{communityContent}, '%');
+	</select>
+	
+	<!-- 게시글 검색(제목+내용) -->
+	<select id="searchTitleContent" parameterType="map" resultType="communityDTO">
+		select tc.community_number, tc.community_title, tcf.community_file_name, tm.member_id, tc.community_date, tc.community_view_count
+		from tbl_community tc left outer join tbl_community_file tcf
+		on tc.community_number = tcf.community_number
+		join tbl_member tm
+		on tc.member_number = tm.member_number
+		where community_title like concat ('%', #{communityTitle}, '%') or community_content like concat('%', #{communityContent}, '%')
+		order by tc.community_number desc limit #{startRow}, #{rowCount};
+	</select>
+	
+	<!-- 게시글 검색(작성자) -->
+	<select id="searchWriter" parameterType="map" resultType="communityDTO">
+		select tc.community_number, tc.community_title, tcf.community_file_name, tm.member_number, tm.member_id, tc.community_date, tc.community_view_count
+		from tbl_community tc left outer join tbl_community_file tcf
+		on tc.community_number = tcf.community_number
+		join tbl_member tm
+		on tc.member_number = tm.member_number
+		where tm.member_id = #{memberId}
+		order by community_number limit #{startRow}, #{rowCount};
+	</select>
+	
+	
+	<!-- 가장 최신 게시글 번호 -->
+	<select id="selectCurrentSequence" resultType="_int">
+		select last_insert_id()
+	</select>
+	
+	<!-- 조회수 카운트 증가 -->
+	<update id="updateViewCount" parameterType="_int">
+		update tbl_community
+		set community_view_count = community_view_count+1
+		where community_number = #{communityNumber}; 
+	</update>
+	
+	<!-- 게시글 삭제 -->
+	<delete id="delete" parameterType="_int">
+		delete from tbl_community
+		where community_number = #{communityNumber}; 
+	</delete>
+	
+	<!-- 게시글 수정 -->
+	<update id="update" parameterType="communityDTO">
+		update tbl_community
+		set community_title = #{communityTitle}, community_content = #{communityContent}
+		where community_number = #{communityNumber};
+	</update>
+</mapper>

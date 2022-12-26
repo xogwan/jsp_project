@@ -1,0 +1,290 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font: 17px/1.5 "ONE-Mobile-Regular";
+    letter-spacing: -0.05em;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: inherit;
+    font-weight: 300;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0 none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul, li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    color: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+/* subheader */
+.sub_title{
+    width: 100%;
+    background-image: url(https://www.rda.go.kr/young/file/imageView.do?fpath=78mfPU1tH5tpGdf2EjZQb0R3AXuZGhjU7I8pBv4Rl9tqEaXhOUrKyqO8iZWgudng&fname=mFFphUfLAB1Ng3Mg1ZV37SJqwwEzgE5GIwhDyL%2F6Nz9VBYOJAsth1MTks%2BecMj4rSFgVYwnGGTl6kLgmqqoWCw%3D%3D&fmime=Lg45aghPCGTl0b%2FVATARWg%3D%3D);
+    padding: 4.706rem 0 0;
+    z-index: 2;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    bottom: 6.353rem;
+    position: relative;
+    height: 17.353rem;
+}
+.sub_title>.container {
+    height: 100%;
+    max-width: 82.353rem;
+    margin: auto;
+    position: relative;
+}
+.sub_title .inner {
+    position: relative;
+    width: 100%;
+    height: 15.353em;
+    margin: 0 auto;
+    max-width: 1317px;
+}
+.title_left_box {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: relative;
+    width: 100%;
+}
+nav.snb{
+    display: block;
+}
+.snb .top{
+    letter-spacing: -0.05em;
+    line-height: normal;
+    font-weight: bold;
+    width: 210px;
+    font-size: 2.824rem;
+    color: #333;
+    /* margin-top: 2.941rem; */
+}
+ul.lgr_ul{
+    list-style: none;
+    width: 450px;
+    padding-left: 0;
+}
+.sub_wrap .sub_title ul li{
+    list-style: none;
+    font-size: 0.882rem;
+}
+
+li.nowMenu{
+    float: left;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.941rem;
+}
+
+.snb ul[data-level="1"]>li.nowMenu>a>span {
+    color: #333;
+    font-weight: 600;
+}
+
+.lgr_ul li{
+    font-size: 0.882rem;
+    letter-spacing: -0.05em;
+    float: left;
+}
+
+
+.snb ul[data-level="1"]>li+li:before {
+    content: '/';
+    margin: 0 1.176rem;
+    color: rgb(0, 0, 0, .5);
+}
+
+.snb ul li a span {
+    font-size: 0.941rem;
+    color: rgb(0, 0, 0, .5);
+}
+
+.title_right_box {
+    position: absolute;
+    right: 0;
+    bottom: 2.47rem;
+    vertical-align: top;
+}
+/* subheader */
+
+
+.contentfullwrap {
+    position: relative;
+    width: 100%;
+    
+}
+
+.contentwrap {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.pagetitle {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    letter-spacing: -0.08em;
+}
+
+.base_boardwrap {
+    clear: both;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.base_boardwrap table {
+    width: 100%;
+    font-weight: 300;
+}
+
+table.brdTline02 {
+    border-top: 2px solid #565656;
+}
+
+
+.base_boardwrite02 table tbody tr th {
+    font-size: 14px;
+    color: #262525;
+    font-weight: 500;
+    text-align: left;
+    background-color: #fbfbfb;
+    padding: 5px 10px 5px 15px;
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.base_boardwrite02 table tbody tr td {
+    font-size: 14px;
+    color: #4a4a4a;
+    font-weight: 400;
+    text-align: left;
+    background: #ffffff;
+    padding: 5px 10px 5px 15px;
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+    vertical-align: middle;
+    min-height: 52px;
+}
+
+.iron-input-note .content {
+    display: block;
+    padding: 0 13px;
+}
+
+.iron-input-note .val {
+    width: 103%;
+    margin: 0 -13px;
+}
+
+input {
+    border: 1px solid #d9d9d9;
+    color: #7b7b7b;
+    width: 75%;
+    padding: 0 12px;
+    vertical-align: middle;
+    height: 38px;
+}
+
+div.fileInfo {
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    background: #403f3f url('https://www.returnfarm.com:444/css/wvtex/img/uploadBtn.png') no-repeat;
+    border: none;
+    overflow: hidden;
+}
+
+div.fileInfo input {
+    display: block !important;
+    width: 120px !important;
+    height: 30px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+
+.attchtext {
+    font-size: 12px;
+    color: #868686;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+span.tbl_lineb {
+    border-bottom: 1px solid #a5a4a4;
+    height: 1px;
+    width: 100%;
+    display: block;
+}
+
+.te_right {
+    text-align: right;
+}
+
+.iron-action {
+    position: relative;
+    display: inline-block;
+    padding: 0 30px;
+    color: #FFF;
+    font-size: 16px;
+    line-height: 41px;
+    text-align: center;
+}
+
+.iron-action.featured {
+    padding-left: 64px;
+}
+
+.iron-action.primary {
+    display: inline-block;
+    color: #ffffff;
+    background: #464d77;
+    border-radius: 20px;
+    padding: 0px 15px;
+    font-size: 16px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    margin-top: 10px;
+}
+

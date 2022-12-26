@@ -1,0 +1,62 @@
+/*popup*/
+.popup_layer {
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/*팝업 박스*/
+.popup_box {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    overflow: auto;
+    /* height: 550px; */
+    width: 700px;
+    transform: translate(-50%, -50%);
+    z-index: 1002;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.35);
+}
+
+/*컨텐츠 영역*/
+.popup_box .popup_cont {
+    padding: 30px;
+}
+
+/*오버레이 뒷배경*/
+.popup_overlay {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* clase 버튼 */
+div.close-btn { height: 20px; }
+div.close-btn img {
+    float: right;
+    width: 30px;
+    height: 30px;}
+div img.find-id-close { margin: 5px; }
+
+/*popup*/
+div.popup_layer { display: none; }
+/* 아이디 */
+div.findId_code { display: none;}
+div.popup_layer .id_step2 { display: none; }
+
+/* 비밀번호 */
+div.findPw_code { display: none;}
+div.popup_layer .pw_step2 { display: none; }

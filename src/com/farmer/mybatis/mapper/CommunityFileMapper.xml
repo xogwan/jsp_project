@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CommunityFile">
+	<!-- 게시글 파일 추가 -->
+	<insert id="insert" parameterType="CommunityFileVO">
+		insert into tbl_community_file
+		values(#{communityFileName}, #{communityFileRealname}, #{communityNumber})
+	</insert>
+	
+	<!-- 파일 검색 -->
+	<select id="select" parameterType="_int" resultType="CommunityFileVO">
+		select community_file_name, community_file_realname from tbl_community_file where community_number = #{communityNumber} 
+	</select>
+	
+	<!-- 파일 삭제 -->
+	<delete id="delete" parameterType="_int">
+		delete from tbl_community_file where community_number = #{communityNumber}
+	</delete>
+</mapper>

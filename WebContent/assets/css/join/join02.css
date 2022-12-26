@@ -1,0 +1,571 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 0;
+}
+.container {
+    height: 100%;
+    max-width: 82.353rem;
+    margin: auto;
+    position: relative;
+}
+.sub_title .inner {
+    position: relative;
+    width: 100%;
+    height: 15.353em;
+    margin: 0 auto;
+}
+.title_left_box {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: relative;
+    width: 100%;
+}
+nav.snb{
+    display: block;
+}
+.snb .top{
+    letter-spacing: -0.05em;
+    line-height: normal;
+    font-weight: bold;
+    width: 210px;
+    font-size: 2.824rem;
+    color: #333;
+    /* margin-top: 2.941rem; */
+}
+ul.lgr_ul{
+    font-family: 'one';
+    list-style: none;
+}
+.sub_wrap .sub_title ul li{
+    list-style: none;
+    font-size: 0.882rem;
+}
+li.nowMenu{
+    float: left;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.941rem;
+}
+li.nowMenu::after{
+    content: '/';
+    margin: 0 1.176rem;
+    color: rgb(0,0,0,.5);
+}
+.lgr_ul li{
+    font-size: 0.941rem;
+    letter-spacing: -0.05em;
+}
+.secondMenu{
+    float: right;
+    color: rgb(0,0,0,.5);
+    font-size: 0.941rem;
+}
+.title_right_box {
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    vertical-align: top;
+}
+body {
+    margin: 0;
+}
+.sub_title {
+    width: 100%;
+    background-image: url(https://www.rda.go.kr/young/images/site/login/sub06_img_bg.png);
+    padding: 4.706rem 0 0;
+    z-index: 2;
+    /* box-sizing: border-box; */
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    bottom: 6.353rem;
+    position: relative;
+    height: 17.353rem;
+}
+.container {
+    height: 100%;
+    max-width: 82.353rem;
+    margin: auto;
+    position: relative;
+}
+.sub_title .inner {
+    position: relative;
+    width: 100%;
+    height: 15.353em;
+    margin: 0 auto;
+}
+.title_left_box {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: relative;
+    width: 100%;
+}
+nav.snb{
+    display: block;
+}
+.snb .top {
+    line-height: normal;
+    font-weight: bold;
+    font-size: 2.824rem;
+    color: #333;
+    margin-top: 2.941rem;
+}
+ul.lgr_ul{
+    font-family: 'one';
+    list-style: none;
+}
+.sub_wrap .sub_title ul li{
+    list-style: none;
+    font-size: 0.882rem;
+}
+li.nowMenu{
+    float: left;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.941rem;
+}
+li.nowMenu::after{
+    content: '/';
+    margin: 0 1.176rem;
+    color: rgb(0,0,0,.5);
+}
+.lgr_ul li{
+    font-size: 0.941rem;
+    letter-spacing: -0.05em;
+}
+.secondMenu{
+    float: right;
+    color: rgb(0,0,0,.5);
+    font-size: 0.941rem;
+}
+.title_right_box {
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    vertical-align: top;
+}
+/* 헤더 부분 ==================================================== */
+/* ============================================================================= */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font: 17px/1.5 "ONE-Mobile-Regular";
+    letter-spacing: -0.05em;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: inherit;
+}
+body {
+    margin: 0;
+}
+/* user agent  */
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+/* user agent  */
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+/* user agent  */
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+/* user agent  */
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+/* user agent */
+div {
+    display: block;
+}
+/* user agent */
+form {
+    display: block;
+    margin-top: 0em;
+}
+input[type="hidden" i] {
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    display: none !important;
+    padding: initial;
+    border: initial;
+}
+input {
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+select {
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    background-color: field;
+    cursor: default;
+    margin: 0em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    border-radius: 0px;
+}
+input[type="text"]{
+    font: 17px/1.5 "NotoSansKR";
+}
+/* 위에쪽 user agent======================================================================================================= */
+section.login {
+    position: relative;
+    min-height: calc(100vh - 295px);
+    width: 100%;
+}
+.sub_title {
+    padding: 4.706rem 0 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: url(https://www.rda.go.kr/young/images/site/login/sub06_img_bg.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    bottom: 6.353rem;
+    height: 22.353rem;
+}
+/* .sub_title > .container {
+    height: 100%;
+} */
+.container {
+    max-width: 82.353rem;
+}
+.container {
+    margin: auto;
+    position: relative;
+}
+.sub_title .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.sub_title .inner > .title_left_box {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: absolute;
+    left: 0;
+}
+.snb .top {
+    line-height: normal;
+    font-weight: bold;
+    font-size: 2.824rem;
+    color: #333;
+    margin-top: 2.941rem;
+}
+.sub_title .inner > .title_right_box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    vertical-align: top;
+    margin-top: 1.176rem;
+}
+.sub_title .inner > .title_right_box > img {
+    display: block;
+}
+/* 위쪽은 헤더 아래 이미지 있는 부분 ======================================= */
+#lgr_join_process {
+    display: flex;
+    padding: 0px;
+    width: 600px;
+    height: 80px;
+    background-color: #f9f9f9;
+    border-radius: 80px;
+    margin: 0 auto;
+    
+    /* margin-bottom: 800px; */
+}
+.lgr_middle_process {
+    width: 23%;
+    height: 80px;
+    border-radius: 80px;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    padding: 0px;
+    margin-left: 60px;
+    margin : 0 auto;
+}
+.lgr_step2 {
+    padding-top: 15px;
+    font-size: 14px;
+    color: #c5c5c5;
+}
+.lgr_step_text2 {
+    font-size: 20px;
+    color: #c5c5c5;
+}
+.lgr_now_process {
+    width: 33%;
+    height: 80px;
+    background-color: #46733f;
+    border-radius: 80px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 3px 3px 3px 3px rgb(128 128 128 / 40%);
+    display: inline-block;
+    padding: 0px;
+}
+.lgr_step1 {
+    padding-top: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+.lgr_step_text1 {
+    font-size: 20px;
+    color: #fff;
+}
+#lgr_triangle {
+    width: 0px;
+    height: 0px;
+    border-top: 8px solid #46733f;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid none;
+    position: relative;
+    top: 25px;
+    left: 92px;
+}
+/* 위쪽까지가 step01부터 step04까지의 표지문구 ===================================================*/
+/* 23 */
+.join_content {
+    width: 100%;
+    min-height: 140px;
+    padding-bottom: 80px;
+    margin: auto;
+    position: relative;
+    margin-top: 50px;
+}
+/* 25 */
+.detail_table {
+    width: 80%;
+    margin-left: 10%;
+    border-top: 2px solid #7fb069;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+}
+/* 34 */
+table {
+    font-size: 16px;
+}
+/* 35 */
+table th {
+    text-align: center;
+    width: 15%;
+    background-color: #f8fbf7;
+}
+/* 36 */
+td {
+    width: 35%;
+    height: 50px;
+    padding: 5px;
+}
+/* 5 */
+div.email>input[type="text"], div.email>select {
+    width: calc(95% / 2);
+}
+/* 92 */
+.lgr_strong {
+    color: red;
+    display: inline-block;
+}
+/* 위에쪽이 표======================================================== */
+/* 81 */
+.btn_wrap ul {
+    margin-right: 40%;
+    margin-top: 90px;
+}
+/* 85 */
+#lgr_cancel {
+    width: 150px;
+    height: 46px;
+    background-color: #afafaf;
+    color: #fff;
+    text-align: center;
+    line-height: 46px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+/* 86 */
+#lgr_cancel > a {
+    display: block;
+    line-height: 46px;
+}
+/* 87 */
+#lgr_submit {
+    width: 150px;
+    height: 46px;
+    background-color: #003668;
+    color: #fff;
+    text-align: center;
+    line-height: 46px;
+    border-radius: 10px;
+}
+/* 90 */
+.btn_wrap li a {
+    background: none;
+    border: 0px;
+    color: #fff;
+}
+select.domain {
+    margin-left: 1px;
+}
+#lgr_location select {
+    width: calc(95% / 2);
+}
+.phoneNum {
+    margin-bottom: 3.5px;
+}
+input.phoneNum {
+    border: none;
+    padding: 0 15px;
+    height: 40px;
+    width: 100%;
+}
+div.phoneSize {
+    display: inline-block;
+    width: 77%;
+}
+label.phoneNum {
+    display: flex;
+}
+/* 새롭게 추가한 인증번호버튼 부분 */
+div.fixedBtnSize .btn_phoneNum {
+    width: 104px;
+    background-color: #46733f;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    height: 40px;
+    top: 0px;
+    right: 0px;
+}
+button.btn_confirmNum {
+    width: 104px;
+    background-color: #46733f;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    height: 40px;
+    top: 0px;
+    right: 0px;
+}
+.btn_confirmNum {
+    position: absolute;
+}
+.fixedBtnSize{
+    margin-left: 26px;
+}
+.fixedPsize{
+    position: relative;
+}
+.btn_phoneNum{
+    position: absolute;
+}
+.error_next_box {
+    display: block;
+    margin: 0px 0 -15px;
+    font-size: 12px;
+    line-height: 14px;
+    color: red;
+}
+.green { color: #08a600!important; }
+.u_black { color: #000!important; }
+
+.change_pw_check {
+    margin: 0px 0 -15px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+input[type="radio"] {
+	margin-right: 5px;
+}
+
+label.grade {
+	margin-right: 20px;
+}

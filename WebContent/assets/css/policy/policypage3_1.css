@@ -1,0 +1,448 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "one";
+    src: url("fonts/본문체/ONE\ Mobile\ Regular.ttf") format("truetype");
+    font-weight: 100;
+}
+
+/* CSS 초기설정 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+body {
+    font: 17px/1.5;
+    font-family: "one";
+}
+
+
+/* ------------------------------------------------------------------ */
+div.wrap {
+    width: 100%;
+}
+
+
+/* 네비게이션바 아래 title */
+div.sub_title {
+    background-image: url(https://www.rda.go.kr/young/file/imageView.do?fpath=78mfPU1tH5tpGdf2EjZQb0R3AXuZGhjU7I8pBv4Rl9tqEaXhOUrKyqO8iZWgudng&fname=YWxCLMzuEeiAxEbYK5ryyBIDnQ3sAVPmyENdCzTD93CqU8croccmadzITalShGjzS3fBWH4rEEZKSpU2wGHD4A%3D%3D&fmime=Lg45aghPCGTl0b%2FVATARWg%3D%3D);
+    padding: 4.706rem 0 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    bottom: 5.353rem;
+    height: 18.253rem
+}
+
+/* 큰 틀 사이즈 */
+div.sub_title .container {
+    max-width: 82.353rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 글자,아이콘,이미지 넣을 div */
+div.sub_title .container .inner {
+    width: 100%;
+    height: 15.353em;
+    position: relative;
+}
+
+/* 마이페이지 글씨 */
+div.left_font {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: relative;
+    width: 100%;
+}
+
+div.mypage .top {
+    display: inline-block;
+    line-height: normal;
+    font-weight: bold;
+    width: 226px;
+    font-size: 2.824rem;
+    color: #333;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* 일러스트 설정 */
+.title_right_box {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.title_right_box img {
+    display: block;
+}
+
+.page_wrap{
+    position: relative;
+    margin:auto;
+    max-width: 90rem;
+    height: 100%;
+}
+
+.page{
+    margin: 0;
+    /* overflow: hidden; */
+}
+.page_cover{
+    max-width: 112.5rem;
+}
+
+.page_use{
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.category{
+    margin-left:20px;
+}
+
+.ct1, .ct2, .ct4{
+    display: inline-block;
+    vertical-align: bottom;
+    cursor: pointer;
+    font-size: 18.5px;
+    color: #8a8a8a;
+    height: 60px;
+    background-color: #ccc;
+    width: 24%;
+    text-align: center;
+    line-height: 60px;
+    margin: 0;
+    border-right: solid 1px #ccc;
+    border-left: solid 1px #ccc;
+}
+
+.ct3{
+    display: inline-block;
+    vertical-align: bottom;
+    cursor: pointer;
+    font-size: 18.5px;
+    color: #8a8a8a;
+    height: 60px;
+    width: 24%;
+    text-align: center;
+    line-height: 60px;
+    margin: 0;
+    border-right: solid 1px #ccc;
+    border-left: solid 1px #ccc;
+    color: #555555;
+    border-bottom: none;
+    background-color: #fff;
+    border-top: solid 3px #7fb069;
+    
+}
+a{
+    text-decoration: none;
+}
+
+.tab{
+    text-align: center;
+    font-size: 0;
+    z-index: 0;
+    position: relative;
+    margin-top: 50px;
+}
+
+.tab1 a{
+    font-weight: bold;
+    color: #8a8a8a;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: 0px;
+    padding: 18px 10px;
+    color: #333;
+}
+
+.check_box1{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: middle;
+    margin-right: 1rem;
+    background: url(https://rda.go.kr/young/images/site/mis/common_ico_down_w.png) no-repeat;
+    background-color: #7fb069;
+    background-position: center;
+}
+
+.tab2, .tab3{
+    border: none;
+    color: #8a8a8a;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 18px 10px;
+    vertical-align: middle;
+}
+
+.check_text{
+    text-decoration: none;
+    color: #333;
+}
+
+.check_box2, .check_box3{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: middle;
+    margin-right: 1rem;
+    background: url(https://rda.go.kr/young/images/site/mis/common_ico_down_b.png) no-repeat;
+    background-position: center;
+    border: solid 1px #ccc;
+}
+
+/* 페이지 공통 끝*/
+
+.table_wrap{
+    position: relative;
+    margin:auto;
+    max-width: 90rem;
+    height: 100%;
+}
+
+.table{
+    margin: 110px 151px 0 0;
+}
+
+.table1{
+    border-top: 1px solid #ccc;
+    padding-top: 30px;
+    margin-left:20px;
+    width: 1400px;
+    height: 500px;
+}
+
+.table1::before{
+    content: '';
+    display: block;
+    clear: both;
+    width: 220px;
+    height: 3px;
+    background: #46351d;
+    margin-top: -32px;
+}
+
+.table1_content1{
+    font-size: 26px;
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+    width: 420px;
+}
+
+.note_img{
+    width: 340px;
+    height: 360px;
+    background-color: #d2e7dd;
+    margin-top: -30px;
+    margin-left: -30px;
+    margin-right: 111px;
+}
+
+.note_img img{
+    margin-top: 28px;
+}
+
+.note_img p{
+    position: relative;
+    top: -265px;
+    left: 65px;
+    width: 30%;
+}
+
+.table1_content2{
+    float: left;
+    font-size: 19px;
+    width: 920px;
+    padding-bottom: 50px;
+}
+
+.table1_content2_first{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom: 2px dotted #ccc;
+    width: 100%;
+}
+
+.table1_content2_first h4{
+    float: left;
+    width: 160px;
+    padding-left: 16px;
+}
+
+.table1_content2_second{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom: 2px dotted #ccc;
+    width: 100%;
+}
+
+.table1_content2_second h4{
+    float: left;
+    width: 160px;
+    padding-left: 16px;
+}
+
+.table1_content2_third{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom: 2px dotted #ccc;
+    width: 100%;
+}
+
+.table1_content2_third h4{
+    float: left;
+    width: 160px;
+    padding-left: 16px;
+}
+
+.table1_content2_third .red{
+    margin-left: 175px;
+    color: #ee2323;
+}
+
+.table1_content2_fourth{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom: 2px dotted #ccc;
+    width: 100%;
+}
+
+.table1_content2_fourth h4{
+    float: left;
+    width: 160px;
+    padding-left: 16px;
+}
+
+.table1_content2_fourth span{
+    margin-left: 175px;
+}
+
+
+.table1_content2_fourth .red{
+    margin-left: 175px;
+    color: #ee2323;
+}
+
+.table1_content2_fifth{
+    padding-bottom: 62px;
+    padding-top: 30px;
+    width: 100%;
+    border-bottom: 2px dotted #ccc;
+}
+
+.table1_content2_fifth h4{
+    float: left;
+    width: 160px;
+    padding-left: 16px;
+}
+
+.table1_content2_fifth span{
+    color: #ee2323;
+    margin-left: -50px;
+}
+
+
+.cute_img{
+    max-width: 100%;
+    display: inline-block;
+    margin-bottom: 80px;
+}
+
+.cute_img1{
+    margin-left: 175px;
+    margin-right: 36px;
+    margin-top: 30px;
+}
+
+.cute_img2{
+    margin-right: 36px;
+    margin-top: 30px;
+}
+
+.cute_img3{
+    margin-top: 30px;
+}
+
+.img_text1{
+    position: relative;
+    left: 13.2rem;
+    top: -4rem;
+    float: left;
+}
+
+
+.img_text2{
+    position: relative;
+    left: 20.3rem;
+    top: -4rem;
+    float: left;
+}
+
+
+.img_text3{
+    position: relative;
+    left: 25.5rem;
+    top: -4rem;
+    float: left; 
+}
+
+.cute_text span{
+    margin-left: 175px;
+}
+
+.table1_content2_sixth{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 100%;
+}
+
+.table1_content2_sixth h4{
+    float: left;
+    width: 160px;
+    padding-left: 16px;
+}
+
+.table1_content2_sixth span{
+    margin-left: 175px;
+}
+.line a:hover{
+    text-decoration: underline;
+}
+
+.line{
+    margin-left: 175px;
+}
+
+.red{
+    margin-left: 175px;
+    color: #ee2323;
+}
+
+/* table1끝 */
+

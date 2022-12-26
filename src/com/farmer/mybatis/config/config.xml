@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+   <settings>
+      <setting name="mapUnderscoreToCamelCase" value="true"/>
+   </settings>
+   
+   <typeAliases>
+      <typeAlias type="com.farmer.app.member.vo.MemberVO" alias="memberVO"/>
+      <typeAlias type="com.farmer.app.alba.vo.AlbaVO" alias="albaVO"/>
+      <typeAlias type="com.farmer.app.memberAlba.vo.MemberAlbaVO" alias="memberAlbaVO"/>
+      <typeAlias type="com.farmer.app.program.vo.ProgramVO" alias="programVO"/>
+      <typeAlias type="com.farmer.app.memberProgram.vo.MemberProgramVO" alias="memberProgramVO"/>
+      <typeAlias type="com.farmer.app.community.vo.CommunityVO" alias="communityVO"/>
+      <typeAlias type="com.farmer.app.community.vo.CommunityDTO" alias="communityDTO"/>
+      <typeAlias type="com.farmer.app.cropsInfo.vo.CropsInfoVO" alias="cropsInfoVO"/>
+      <typeAlias type="com.farmer.app.localSpeciality.vo.LocalSpecialityVO" alias="localSpecialityVO"/>
+      <typeAlias type="com.farmer.app.mentor.vo.MentorVO" alias="mentorVO"/>
+      <typeAlias type="com.farmer.app.notice.vo.NoticeVO" alias="noticeVO"/>
+      <typeAlias type="com.farmer.app.noticeFile.vo.NoticeFileVO" alias="noticeFileVO"/>
+      <typeAlias type="com.farmer.app.reply.vo.ReplyVO" alias="replyVO"/>
+      <typeAlias type="com.farmer.app.reply.vo.ReplyDTO" alias="replyDTO"/>
+      <typeAlias type="com.farmer.app.communityFile.vo.CommunityFileVO" alias="CommunityFileVO"/>
+      <typeAlias type="com.farmer.app.noticeFile.vo.NoticeFileVO" alias="noticeFileVO"/>
+      <typeAlias type="com.farmer.app.admin.vo.AdminProgramVO" alias="adminProgramVO"/>
+      <typeAlias type="com.farmer.app.admin.vo.AdminAlbaVO" alias="adminAlbaVO"/>
+      <typeAlias type="com.farmer.app.admin.vo.AdminMentorVO" alias="adminMentorVO"/>
+      <typeAlias type="com.farmer.app.admin.vo.AdminCommunityVO" alias="adminCommunityVO"/>
+      <typeAlias type="com.farmer.app.admin.vo.AdminReplyVO" alias="adminReplyVO"/>
+      <typeAlias type="com.farmer.app.admin.vo.AdminNoticeVO" alias="adminNoticeVO"/>
+      <typeAlias type="com.farmer.app.admin.vo.MainUserVO" alias="mainUserVO"/>
+      <typeAlias type="com.farmer.app.admin.vo.MainReplyVO" alias="mainReplyVO"/>
+      <typeAlias type="com.farmer.app.admin.vo.MainMentorVO" alias="mainMentorVO"/>
+      <typeAlias type="com.farmer.app.admin.vo.MainCommunityVO" alias="mainCommunityVO"/>
+      <typeAlias type="com.farmer.app.admin.vo.AdminMemberDTO" alias="adminMemberDTO"/>
+      <!-- <typeAlias type="com.farmer.app.board.vo.BoardDTO" alias="boardDTO"/> -->
+   </typeAliases>
+      
+
+   <environments default="mysql">
+      <environment id="mysql">
+         <transactionManager type="JDBC"/>
+         <dataSource type="POOLED">
+            <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="url" value="jdbc:mysql://localhost:3306/farmer"/>
+            <property name="username" value="root"/>
+            <property name="password" value="1234"/>
+         </dataSource>
+      </environment>
+   </environments>
+   
+   <mappers>
+      <mapper resource="com/farmer/mybatis/mapper/MemberMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/MemberAlbaMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/AlbaMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/MemberProgramMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/ProgramMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/CommunityMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/CropsInfoMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/LocalSpecialityMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/MentorMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/NoticeMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/ReplyMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/CommunityFileMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/NoticeFileMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/MyPageMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/AdminMapper.xml"/>
+      <mapper resource="com/farmer/mybatis/mapper/IndexMapper.xml"/>
+   </mappers>
+</configuration>

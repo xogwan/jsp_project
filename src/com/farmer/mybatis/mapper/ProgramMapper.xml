@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="program">
+	<!-- 전체 글 내용 조회/최근마감일순정렬 -->
+	<select id="selectAll" parameterType="map" resultType="programVO">
+      SELECT program_number, program_name, program_location, program_start_date, program_end_date, program_start_time, program_end_time, 
+      program_fee, program_apply_start_date, program_apply_end_date, program_date, program_recruited_count, program_recruited_total_count, 
+      program_view_count, program_phone_number, program_image, member_number
+	  FROM tbl_program 
+	  order by program_number desc limit #{startRow}, #{rowCount}
+   </select>
+   
+   <!-- 전체 글 개수 조회 -->
+   <select id="selectAllCount" resultType="_int">
+      select count(program_number) from tbl_program
+   </select>
+   
+	<!-- 진행 중인 프로그램 개수 -->
+	<select id="selectProcess" parameterType="string" resultType="_int">
+		select count(program_number) from tbl_program where #{today} BETWEEN program_apply_start_date AND program_apply_end_date
+	</select>
+	
+	<!-- 클릭한 글 내용 조회 -->
+	<select id="select" parameterType="_int" resultType="programVO">
+		SELECT program_number, program_name, program_location, program_start_date, program_end_date, program_start_time, program_end_time, 
+	    program_fee, program_apply_start_date, program_apply_end_date, program_date, program_recruited_count, program_recruited_total_count, 
+	    program_view_count, program_phone_number, program_image, member_number
+		FROM tbl_program where program_number = ${programNumber}
+	</select>
+	
+	<!-- 조회수 -->
+	<update id="updateViewCount" parameterType="_int"> 
+		update tbl_program 
+		set program_view_count = program_view_count + 1 
+		where program_number = #{programNumber} 
+	</update>
+	
+	<!-- 프로그램 글 등록하기 -->
+	<insert id="insert" parameterType="ProgramVO">
+		INSERT INTO tbl_program
+		(program_name, program_location, program_start_date, program_end_date, program_start_time, program_end_time,
+		program_fee, program_apply_start_date, program_apply_end_date, program_recruited_count, program_recruited_total_count,
+		program_phone_number, program_image, member_number)
+		VALUES(#{programName}, #{programLocation}, #{programStartDate}, #{programEndDate}, #{programStartTime}, #{programEndTime}, 
+		#{programFee}, #{programApplyStartDate}, #{programApplyEndDate}, #{programRecruitedCount}, #{programRecruitedTotalCount},
+		#{programPhoneNumber}, #{programImage}, #{memberNumber})
+   </insert>
+   
+   <!-- 모집 인원 카운팅 -->
+   <select id="countPeople" parameterType="_int" resultType="_int">
+   		select count(program_number) from tbl_member_program where program_number = #{programNumber}
+   </select>
+
+	<!-- 조회순정렬 -->
+	<select id="selectView" parameterType="map" resultType="ProgramVO">
+      SELECT program_number, program_name, program_location, program_start_date, program_end_date, program_start_time, program_end_time, 
+      program_fee, program_apply_start_date, program_apply_end_date, program_date, program_recruited_count, program_recruited_total_count, 
+      program_view_count, program_phone_number, program_image, member_number
+	  FROM tbl_program 
+	  order by program_view_count desc limit #{startRow}, #{rowCount}
+	</select>
+	
+	<!-- 최근마감일순정렬 -->
+	<select id="selectDeadline" parameterType="map" resultType="ProgramVO">
+      SELECT program_number, program_name, program_location, program_start_date, program_end_date, program_start_time, program_end_time, 
+      program_fee, program_apply_start_date, program_apply_end_date, program_date, program_recruited_count, program_recruited_total_count, 
+      program_view_count, program_phone_number, program_image, member_number
+	  FROM tbl_program 
+	  order by program_apply_end_date desc limit #{startRow}, #{rowCount}
+	</select>
+	
+	<!-- 프로그램 글 삭제 -->
+	<delete id="delete" parameterType="_int"> 
+		delete from tbl_program where program_number = #{programNumber} 
+	</delete>
+	
+	<!-- 프로그램 글 수정 -->
+	<update id="update" parameterType="programVO">
+		update tbl_program
+		set program_name = #{programName}, program_location = #{programLocation}, program_start_date=#{programStartDate}, program_end_date=#{programEndDate}, 
+		program_fee=#{programFee}, program_apply_start_date=#{programApplyStartDate}, program_apply_end_date=#{programApplyEndDate},
+		program_recruited_count=#{programRecruitedCount}, program_recruited_total_count=#{programRecruitedTotalCount}, 
+		program_phone_number=#{programPhoneNumber}, program_image=#{programImage}
+		where program_number = #{programNumber}
+	</update>
+	
+   	<!-- 프로그램 신청여부 확인 -->
+	<select id="isApply" parameterType="map" resultType="_int">
+		select count(member_number) from tbl_member_program where member_number = #{memberNumber} and program_number = #{programNumber}	
+	</select>
+	
+
+	
+</mapper>

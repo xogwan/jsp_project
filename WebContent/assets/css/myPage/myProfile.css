@@ -1,0 +1,367 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "one";
+    src: url("fonts/본문체/ONE\ Mobile\ Regular.ttf") format("truetype");
+    font-weight: 100;
+}
+
+/* CSS 초기설정 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+body {
+    font: 17px/1.5;
+    font-family: "one";
+}
+
+
+/* ------------------------------------------------------------------ */
+div.wrap {
+    width: 100%;
+}
+
+
+/* 네비게이션바 아래 title */
+div.sub_title {
+    background-color: antiquewhite;
+    background-image: url("https://www.rda.go.kr/young/file/imageView.do?fpath=78mfPU1tH5tpGdf2EjZQb0R3AXuZGhjU7I8pBv4Rl9tqEaXhOUrKyqO8iZWgudng&fname=CwpuoJHL%2FKLc0%2BUEvvptYk3Doye33FfKkrZOai5V4eyfJpwkcUEvM%2Bk1GaKR5UCwCQ2OQHfSCOCioOTsdp1yYw%3D%3D&fmime=Lg45aghPCGTl0b%2FVATARWg%3D%3D");
+    padding: 4.706rem 0 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    bottom: 5.353rem;
+    height: 18.253rem
+}
+
+/* 큰 틀 사이즈 */
+div.sub_title .container {
+    max-width: 82.353rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 글자,아이콘,이미지 넣을 div */
+div.sub_title .container .inner {
+    width: 100%;
+    height: 15.353em;
+    position: relative;
+}
+
+/* 마이페이지 글씨 */
+div.left_font {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: relative;
+    width: 100%;
+}
+
+div.mypage .top {
+    display: inline-block;
+    line-height: normal;
+    font-weight: bold;
+    width: 226px;
+    font-size: 2.824rem;
+    color: #333;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* 일러스트 설정 */
+.title_right_box {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.title_right_box img {
+    display: block;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* 회원정보 폼 설정 */
+div.sub_content {    
+    margin: 0;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+div.sub_content .container {
+    max-width: 88.353rem;
+    margin: 0 auto;
+}
+div.sub_content div.inner {
+    width: 100%;
+    float: right;
+}
+
+/* 좌우에 있는 박스 설정 */
+.user_info .user_box {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* 아이콘 + 버튼 div 가로정렬 */
+.user_info .user_box .user_pic,
+.user_info .user_box .user_i {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* 아이콘 설정 */
+.user_info {
+    width: 100%;
+    height: 10.588rem;
+    background: #f3faf0 url("https://www.rda.go.kr/young/images/site/login/my_bg_01.png") no-repeat;
+    background-position: 100% 70%;
+    border: 0.059rem solid #ccc;
+    /* 좌우하 테투리 */
+    border-top: 0.118rem solid #7fb069;
+}
+/* 아이콘 뒷배경 동그라미 */
+.user_info .user_box .user_pic {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 2rem;
+    width: 6.471rem;
+    height: 6.471rem;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* 글자 설정 */
+.user_info .user_box .user_i p {
+    font-size: 0.941rem
+}
+.user_info .user_box .user_i p span {
+    font-weight: bold;
+    font-size: 1.176rem;
+    margin: 0 0.588rem 0 1.176rem;
+}
+
+/* 기능버튼(로그아웃,정보수정,권한신청) */
+.user_info .user_box .user_i ul {
+    margin-top: 1.471rem;
+}
+.user_info .user_box .user_i ul li {
+    display: inline-block;
+}
+.user_info .user_box .user_i ul li+li {
+    margin-left: 0.882rem;
+}
+.user_info .user_box .user_i ul li a {
+    display: block;
+    width: 5.882rem;
+    height: 2.059rem;
+    line-height: 2.059rem;
+    text-align: center;
+    font-size: 0.824rem;
+    background-color: #fff;
+    border: 0.059rem solid #ccc;
+    border-radius: 1.176rem;
+}
+.user_info .box01 {
+    margin: 2.059rem 0 0 5.882rem;
+}
+
+/* 오른쪽 가입형태, 지역, 농작물 */
+.user_info .box02 {
+    float: right;
+    margin-top: 1.471rem;
+    margin-left: 0.647rem;
+    margin-right: 240px;
+    vertical-align: top;
+}
+.user_info .box02 ul li {
+    display: inline-block;
+    text-align: center;
+    height: 7.059rem;
+    padding: 0 4.118rem;
+}
+.user_info .box02 ul li+li {
+    border-left: 0.059rem solid #dadcd9;
+}
+/* 첫 번째와 마지막 항목에는 오른쪽 패딩 먹임 */
+.user_info .box02 ul li:first-child {
+    padding: 0 4.118rem 0 0;
+}
+.user_info .box02 ul li:last-child {
+    padding: 0 0 0 4.118rem;
+}
+/* 분류(가입형태, 지역) 글자 설정 */
+.user_info .box02 ul li p:first-child {
+    font-size: 0.941rem;
+    margin-top: 0.941rem;
+}
+
+.user_info .box02 ul li:first-child p:first-child:before {
+    content: "";
+    display: block;
+    margin: 0 auto 0.765rem;
+    width: 2.412rem;
+    height: 2.353rem;
+    background: url('https://www.rda.go.kr/young/images/site/login/my_ico_02.png');
+    background-size: cover;
+}
+/* 각 분류별 회원이 입력한 정보 */
+.user_info .box02 ul li:nth-child(2) p:first-child:before {
+    content: "";
+    display: block;
+    margin: 0 auto 0.765rem;
+    width: 2.824rem;
+    height: 2.059rem;
+    background: url("/assets/images/myPage/location.JPG");
+    background-size: cover;
+}
+.user_info .box02 ul li:last-child p:first-child:before {
+    content: "";
+    display: block;
+    margin: 0 auto 0.765rem;
+    width: 1.529rem;
+    height: 2.059rem;
+    background: url("/assets/images/myPage/farmingTool.JPG");
+    background-size: cover;
+}
+.user_info .box02 ul li p:last-child {
+    display: inline-block;
+    margin-top: 0.294rem;
+    font-weight: bold;
+    font-size: 1.059rem;
+    position: relative;
+    padding: 0 0.353rem;
+    z-index: 1;
+}
+/* 회원이 입력한 정보의 조그마한 뒷배경 */
+.user_info .box02 ul li p:last-child:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.471rem;
+    width: 100%;
+    height: 0.8rem;
+    background: rgb(127, 176, 105, .2);
+    border-radius: 1.35rem;
+    z-index: -1;
+}
+/* 회원이 입력한 정보 즉, 가입형태 -> 일반인 등의 글자 설정 */
+.user_info .box02 ul li p span {
+    font-weight: bold;
+    font-size: 1.059rem;
+    margin-left: 8px;
+}
+
+
+
+
+.supp_info {
+    width: 100%;
+    margin-top: 90px;
+}
+
+/* 더보기 버튼 있는 div 가로 정렬 */
+.supp_info .myProgramMore,
+.supp_info .myPostMore {
+    width: 661px;
+    display: inline-block;
+    vertical-align: top;
+}
+.supp_info .myProgramMore+.myPostMore {
+    margin-left: 85px; /* 간격 */
+}
+.supp_info h4,
+.supp_info a {
+    display: inline-block; /* 가로 정렬 */
+}
+.supp_info h4 {
+    font-size: 1.647rem;
+}
+
+/* 더보기 버튼 */
+.supp_info a.mre {
+    display: inline-block;
+    width: 6.824rem;
+    height: 2.059rem;
+    line-height: 2.059rem;
+    border: 0.059rem solid #333;
+    border-radius: 1.176rem;
+    text-align: center;
+}
+/* 더보기 버튼 내에 > 표시 */
+.supp_info a.mre:after {
+    display: inline-block;
+    content: '';
+    width: 0.353rem;
+    height: 0.706rem;
+    margin-left: 2.235rem;
+    background: url('https://www.rda.go.kr/young/images/site/root_ico_arrow.png');
+}
+/* 분류와 더보기 버튼 사이에 "---" 표시 */
+.supp_info .myProgramMore>h4:after,
+.supp_info .myPostMore>h4:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    margin: 0px 13px;
+    height: 0.059rem;
+    border-top: 0.118rem dashed #ccc;
+}
+/* 프로그램 신청 내역 ---- width 설정 */
+.supp_info .myProgramMore>h4:after {
+    width: 267px;
+}
+/* 게시판 활동 내역 ---- width 설정 */
+.supp_info .myPostMore>h4:after {
+    width: 347px;
+}
+
+
+/* ------------------------------------------------------------------------------- */
+
+/* 프로그램 신청내역 아래 리스트를 출력할 곳 설정 */
+div.myProgram, div.myPost {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    height: 220px;
+}
+.myProgramList div a,
+.myPost div a {
+    width: 100%;
+}
+
+.myProgramList div li p { /* 리스트는 이후 DB에서 조회가 되지 않을 경우 none 처리 */
+    display: inline-block;
+    width: 70%;
+}
+.myProgramList div li span {
+    float: right;
+}
+
+.myProgramList div {
+    padding: 30px;
+    height: 50px;
+}
+
+/* 게시글 작성내역 리스트를 출력할 곳 설정 */
+.myPostList { /* 리스트는 이후 DB에서 조회가 되지 않을 경우 none 처리 */
+    padding: 98px;
+    text-align: center;
+
+}
+

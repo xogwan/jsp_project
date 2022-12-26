@@ -1,0 +1,535 @@
+@charset "UTF-8";
+
+/* @font-face {
+    font-family: "one";
+    src: url("fonts/본문체/ONE\ Mobile\ OTF\ Regular.otf") format("truetype");
+    font-weight: normal;
+} */
+
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/* 위에쪽 헤더 ========================================================================================== */
+/* 위에쪽 헤더 ========================================================================================== */
+/* 위에쪽 헤더 ========================================================================================== */
+/* 위에쪽 헤더 ========================================================================================== */
+/* 위에쪽 헤더 ========================================================================================== */
+/* 위에쪽 헤더 ========================================================================================== */
+/* 위에쪽 헤더 ========================================================================================== */
+/* 위에쪽 헤더 ========================================================================================== */
+
+
+/* body {
+    font-family: 'one';
+} */
+
+
+
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-text-size-adjust: none;
+}
+
+input {
+    line-height: normal;
+    vertical-align: middle;
+    color: inherit;
+    font: inherit;
+}
+
+dl, ul, ol, menu, li {
+    list-style: none;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+img {
+    margin-left: 13px;
+    max-width: 100%;
+    height: auto;
+    border: 0 none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+i {
+    font-style: italic;
+}
+
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    color: inherit;
+}
+
+
+
+/* ========================================================================= */
+
+
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    margin: 0;
+}
+.sub_title {
+    width: 100%;
+    background-image: url(https://www.rda.go.kr/young/images/site/login/sub06_img_bg.png);
+    padding: 4.706rem 0 0;
+    z-index: 2;
+    /* box-sizing: border-box; */
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    bottom: 6.353rem;
+    position: relative;
+    height: 17.353rem;
+}
+.container {
+    height: 100%;
+    max-width: 82.353rem;
+    margin: auto;
+    position: relative;
+}
+.sub_title .inner {
+    position: relative;
+    width: 100%;
+    height: 15.353em;
+    margin: 0 auto;
+}
+.title_left_box {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: relative;
+    width: 100%;
+}
+nav.snb{
+    display: block;
+}
+.snb .top {
+    line-height: normal;
+    font-weight: bold;
+    font-size: 2.824rem;
+    color: #333;
+    margin-top: 2.941rem;
+}
+ul.lgr_ul{
+    font-family: 'one';
+    list-style: none;
+}
+.sub_wrap .sub_title ul li{
+    list-style: none;
+    font-size: 0.882rem;
+}
+li.nowMenu{
+    float: left;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.941rem;
+}
+li.nowMenu::after{
+    content: '/';
+    margin: 0 1.176rem;
+    color: rgb(0,0,0,.5);
+}
+.lgr_ul li{
+    font-size: 0.941rem;
+    letter-spacing: -0.05em;
+}
+.secondMenu{
+    float: right;
+    color: rgb(0,0,0,.5);
+    font-size: 0.941rem;
+}
+.title_right_box {
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    vertical-align: top;
+}
+
+/* ======= */
+
+.sub_title {
+    padding: 4.706rem 0 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: url(https://www.rda.go.kr/young/images/site/login/sub06_img_bg.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    bottom: 6.353rem;
+    height: 22.353rem;
+}
+
+.sub_title > .container {
+    height: 100%;
+}
+
+.container {
+    max-width: 82.353rem;
+}
+
+.container {
+    margin: auto;
+    position: relative;
+}
+
+.sub_title .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.sub_title .inner > .title_left_box {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: absolute;
+    left: 0;
+}
+
+.snb .top {
+    line-height: normal;
+    font-weight: bold;
+    font-size: 2.824rem;
+    color: #333;
+    margin-top: 2.941rem;
+}
+
+.sub_title .inner > .title_right_box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    vertical-align: top;
+    margin-top: 1.176rem;
+}
+
+.sub_title .inner > .title_right_box > img {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 헤더 부분 ==================================================== */
+/* ============================================================================= */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font: 17px/1.5 "ONE-Mobile-Regular";
+    letter-spacing: -0.05em;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+
+
+/* 위쪽 까지가 헤더 바로 아래부븐 배경과 이미지 있는곳============================================== */
+
+#lgr_join_process {
+    display:flex;
+    padding: 0px;
+    width: 600px;
+    height: 80px;
+    background-color: #f9f9f9;
+    border-radius: 80px;
+    margin: 0 auto;
+    margin-bottom: 800px;
+}
+
+.lgr_now_process {
+    width: 33%;
+    height: 80px;
+    background-color: #46733f;
+    border-radius: 80px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 3px 3px 3px 3px rgb(128 128 128 / 40%);
+    display: inline-block;
+    padding: 0px;
+}
+
+.lgr_step1 {
+    padding-top: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.lgr_step_text1 {
+    font-size: 20px;
+    color: #fff;
+}
+
+#lgr_triangle {
+    width: 0px;
+    height: 0px;
+    border-top: 8px solid #46733f;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid none;
+    position: relative;
+    top: 25px;
+    left: 91px;
+}
+
+.lgr_middle_process {
+    width: 23%;
+    height: 80px;
+    border-radius: 80px;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    padding: 0px;
+    margin-left: 60px;
+    margin : 0 auto;
+}
+
+.lgr_step2 {
+    padding-top: 15px;
+    font-size: 14px;
+    color: #c5c5c5;
+}
+
+.lgr_step_text2 {
+    font-size: 20px;
+    color: #c5c5c5;
+}
+
+
+/* 위쪽까지가 step01부터 step04까지의 표지문구 ================================ */
+
+
+
+.join_wrap {
+    width: 1000px;
+    margin: auto;
+    margin-top: -700px;
+    margin-bottom: 100px;
+}
+
+input:read-only {
+    background-color: #f6f6f6;
+}
+
+/* 위쪽까지가 전체적인 이용약관 폼 태그 ==============================================*/
+
+.term_title {
+    display: flex;
+}
+
+.lgr_title_wrap {
+    display: inline-block;
+    vertical-align: middle;
+    width: 710px;
+}
+
+label.check {
+    height: 40px;
+    line-height: 40px;
+    padding: 10px 0;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.lgr_agreebtn_group1 {
+    display: inline-block;
+    margin-left: 8px;
+}
+.lgr_agreebtn_group2 {
+    display: inline-block;
+    margin-left: 120px;
+}
+
+.lgr_allbtn {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+}
+
+
+
+
+input[type=checkbox] {
+    margin-left: 10px;
+}
+
+.lgr_agree {
+    margin-top: 60px;
+    text-align: center;
+    width: 180px;
+    height: 46px;
+    background-color: #003668;
+    line-height: 46px;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-left: 42%;
+    cursor: pointer;
+}
+
+.lgr_agree > a {
+    display: block;
+    line-height: 46px;
+}
+
+a:link, a:hover, a:active, a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+.lgr_detail_btn0 {
+    /* display: inline-block; */
+    vertical-align: middle;
+    width: 112px;
+    height: 32px;
+    border: solid 1px #ccc;
+    text-align: center;
+    line-height: 32px;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    right: 520px;
+    top: 564px;
+}
+
+.lgr_detail_btn1 {
+    /* display: inline-block; */
+    vertical-align: middle;
+    width: 112px;
+    height: 32px;
+    border: solid 1px #ccc;
+    text-align: center;
+    line-height: 32px;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    right: 520px;
+    top: 604px;
+}
+
+.lgr_detail_btn2 {
+    /* display: inline-block; */
+    vertical-align: middle;
+    width: 112px;
+    height: 32px;
+    border: solid 1px #ccc;
+    text-align: center;
+    line-height: 32px;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    right: 520px;
+    top: 644px;
+}
+
+/* 위쪽은 폼 태그 안에 있는 동의 내용들 css================================================================== */
+.scroll_box {
+    text-align: left;
+    width: 1000px;
+}
+
+.lgr_agree_text {
+    width: 990px;
+    height: 290px;
+    border: solid 1px #ccc;
+    background-color: #f9f9f9;
+    overflow: auto;
+    font-size: 14px;
+    color: #333333;
+    padding: 5px;
+}
+
+script {
+    display: none;
+}
+
+
+
+
+/* .term_title{
+    flex: 1;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.lgr_detail_btn0{
+    flex: 1;
+    margin: 0px 5%;
+    box-sizing: border-box;
+}
+
+.lgr_agreebtn_group{
+    flex: 1;
+    width: 30%;
+    box-sizing: border-box;
+} */
+
+
+
+
+/* 여기 아래부터느 footer ============================================================================================================ */
+/* 여기 아래부터느 footer ============================================================================================================ */
+/* 여기 아래부터느 footer ============================================================================================================ */
+/* 여기 아래부터느 footer ============================================================================================================ */
+
+
+/** FOOTER */
+

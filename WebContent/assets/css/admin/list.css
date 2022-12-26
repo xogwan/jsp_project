@@ -1,0 +1,42 @@
+div#contents-top div.c-left{
+    height: 235px;
+    max-width: 400px;
+}
+
+/* 차트 */
+div#lineChart {
+    width: 90%;
+    height: 88%;
+    margin: 0 auto;
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+
+th.num { width: 9%; }
+th.title { width: 27%;}
+th.address { width: 8%;}
+th.date-start { width: 11%; }
+th.date-end { width: 11%; }
+th.manpower { width: 7%; }
+th.date { width: 15%; }
+th.delete, th.revise { width: 6%; }
+
+td.delete, td.revise { padding: 0 0.3vw; }
+td input[type="button"] {
+    width: 100%;
+    padding: 3px 1px;
+    border: 1px solid rgb(184, 184, 184);
+    box-shadow: 0.1px 0.1px 8px -5px #000000;  
+    
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.9vw;
+    color: #353535;
+    cursor: pointer;
+    word-break: keep-all;
+}
+
+td.delete input[type="button"] { background: #f5c7bd; }
+
+td.revise input[type="button"]:hover { background: #e1e2e4;}
+td.delete input[type="button"]:hover { background: #eeb6aa; }

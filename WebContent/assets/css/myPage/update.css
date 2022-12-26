@@ -1,0 +1,534 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "one_bold";
+    src: url(../fonts/제목체/ONE\ Mobile\ Title.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "one";
+    src: url(../fonts/본문체/ONE\ Mobile\ Regular.ttf);
+    font-weight: 200;
+}
+
+/* CSS 초기설정 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+body {
+    font: 17px/1.5;
+    font-family: "one";
+}
+
+
+/* --------------------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+
+/* 일러스트 설정 */
+.title_right_box {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.title_right_box img {
+    display: block;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* 회원정보 폼 설정 */
+div.sub_content {
+    margin: 0;
+    overflow: hidden;
+}
+div.sub_content .container {
+    width: 80%;
+    max-width: 88.353rem;
+    margin: 0 auto;
+}
+div.sub_content div.inner {
+    width: 100%;
+}
+
+/* 좌우에 있는 박스 설정 */
+.user_info .user_box {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* 아이콘 + 버튼 div 가로정렬 */
+.user_info .user_box .user_pic,
+.user_info .user_box .user_i {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* 아이콘 설정 */
+.user_info {
+    width: 100%;
+    height: 10.588rem;
+    background: #f3faf0 url("https://www.rda.go.kr/young/images/site/login/my_bg_01.png") no-repeat;
+    background-position: 100% 70%;
+    border: 0.059rem solid #ccc;
+    /* 좌우하 테투리 */
+    border-top: 0.118rem solid #7fb069;
+}
+/* 아이콘 뒷배경 동그라미 */
+.user_info .user_box .user_pic {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 2rem;
+    width: 6.471rem;
+    height: 6.471rem;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* 글자 설정 */
+.user_info .user_box .user_i p {
+    font-size: 0.941rem
+}
+.user_info .user_box .user_i p span {
+    font-weight: bold;
+    font-size: 1.176rem;
+    margin: 0 0.588rem 0 1.176rem;
+}
+
+/* 기능버튼(로그아웃,정보수정,권한신청) */
+.user_info .user_box .user_i ul {
+    margin-top: 1.471rem;
+}
+.user_info .user_box .user_i ul li {
+    display: inline-block;
+}
+.user_info .user_box .user_i ul li+li {
+    margin-left: 0.882rem;
+}
+.user_info .user_box .user_i ul li a {
+    display: block;
+    width: 5.882rem;
+    height: 2.059rem;
+    line-height: 2.059rem;
+    text-align: center;
+    font-size: 0.824rem;
+    background-color: #fff;
+    border: 0.059rem solid #ccc;
+    border-radius: 1.176rem;
+}
+.user_info .box01 {
+    margin: 2.059rem 0 0 5.882rem;
+}
+
+/* 오른쪽 가입형태, 지역, 농작물 */
+.user_info .box02 {
+    float: right;
+    margin-top: 1.471rem;
+    margin-left: 0.647rem;
+    margin-right: 240px;
+    vertical-align: top;
+}
+.user_info .box02 ul li {
+    display: inline-block;
+    text-align: center;
+    height: 7.059rem;
+    padding: 0 4.118rem;
+}
+.user_info .box02 ul li+li {
+    border-left: 0.059rem solid #dadcd9;
+}
+/* 첫 번째와 마지막 항목에는 오른쪽 패딩 먹임 */
+.user_info .box02 ul li:first-child {
+    padding: 0 4.118rem 0 0;
+}
+.user_info .box02 ul li:last-child {
+    padding: 0 0 0 4.118rem;
+}
+/* 분류(가입형태, 지역) 글자 설정 */
+.user_info .box02 ul li p:first-child {
+    font-size: 0.941rem;
+    margin-top: 0.941rem;
+}
+.user_info .box02 ul li:first-child p:first-child:before {
+    content: "";
+    display: block;
+    margin: 0 auto 0.765rem;
+    width: 2.412rem;
+    height: 2.353rem;
+    background: url('images/writeImage.JPG');
+    background-size: cover;
+}
+/* 각 분류별 회원이 입력한 정보 */
+.user_info .box02 ul li:nth-child(2) p:first-child:before {
+    content: "";
+    display: block;
+    margin: 0 auto 0.765rem;
+    width: 2.824rem;
+    height: 2.059rem;
+    background: url('images/location.JPG');
+    background-size: cover;
+}
+.user_info .box02 ul li:last-child p:first-child:before {
+    content: "";
+    display: block;
+    margin: 0 auto 0.765rem;
+    width: 1.529rem;
+    height: 2.059rem;
+    background: url('images/farmingTool.JPG');
+    background-size: cover;
+}
+.user_info .box02 ul li p:last-child {
+    display: inline-block;
+    margin-top: 0.294rem;
+    font-weight: bold;
+    font-size: 1.059rem;
+    position: relative;
+    padding: 0 0.353rem;
+    z-index: 1;
+}
+/* 회원이 입력한 정보의 조그마한 뒷배경 */
+.user_info .box02 ul li p:last-child:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.471rem;
+    width: 100%;
+    height: 0.8rem;
+    background: rgb(127, 176, 105, .2);
+    border-radius: 1.35rem;
+    z-index: -1;
+}
+/* 회원이 입력한 정보 즉, 가입형태 -> 일반인 등의 글자 설정 */
+.user_info .box02 ul li p span {
+    font-weight: bold;
+    font-size: 1.059rem;
+    margin-left: 8px;
+}
+
+
+
+/* ------------------------------------------------------------------ */
+div.wrap {
+    width: 100%;
+}
+
+
+/* 네비게이션바 아래 title */
+div.sub_title {
+    background-color: antiquewhite;
+    background-image: url("https://www.rda.go.kr/young/file/imageView.do?fpath=78mfPU1tH5tpGdf2EjZQb0R3AXuZGhjU7I8pBv4Rl9tqEaXhOUrKyqO8iZWgudng&fname=CwpuoJHL%2FKLc0%2BUEvvptYk3Doye33FfKkrZOai5V4eyfJpwkcUEvM%2Bk1GaKR5UCwCQ2OQHfSCOCioOTsdp1yYw%3D%3D&fmime=Lg45aghPCGTl0b%2FVATARWg%3D%3D");
+    padding: 4.706rem 0 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    bottom: 5.353rem;
+    height: 18.253rem
+}
+
+/* 큰 틀 사이즈 */
+div.sub_title .container {
+    max-width: 82.353rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 글자,아이콘,이미지 넣을 div */
+div.sub_title .container .inner {
+    width: 100%;
+    height: 15.353em;
+    position: relative;
+}
+
+/* 마이페이지 글씨 */
+div.left_font {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: relative;
+    width: 100%;
+}
+
+div.mypage .top {
+    display: inline-block;
+    line-height: normal;
+    font-weight: bold;
+    width: 287px;
+    font-size: 2.824rem;
+    color: #333;
+}
+
+/* 개인정보 수정 폼 */
+table.detail_table {
+    width: 100%;
+    border-top: 2px solid #7fb069;
+    border-bottom: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+/* 각 행 설정 */
+table.detail_table th, table.detail_table td {
+    background-color: #f8fbf7;
+    padding: 20px 15px;
+    color: #444;
+    line-height: 200%;
+    font-size: 17px;
+    border-bottom: 1px solid #ddd;
+}
+table.detail_table td {
+    background-color: white;
+    border-left: 1px solid #ddd;
+}
+
+/* ↓ 확대 시 깨짐 방지용 */
+table.detail_table th:first-child { width: 120px; }
+.userId_reuslt { width: 40%; }
+.password_th { width: 17%; }
+
+
+
+/* 비밀번호 input 설정 */
+input#password, input#passwordCheck {
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box; /* input 사이즈 기준으로 padding을 무시하고 width 100% 적용 */
+    font-size: 17px;
+}
+
+/* 아이디 input 설정 */
+input#id {
+	width: 100%;
+    border: 1px solid #e8e8e8;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box; /* input 사이즈 기준으로 padding을 무시하고 width 100% 적용 */
+    font-size: 17px;
+}
+/* 이름 input 설정 */
+input#name {
+	width: 100%;
+    border: 1px solid #e8e8e8;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box; /* input 사이즈 기준으로 padding을 무시하고 width 100% 적용 */
+    font-size: 17px;
+}
+
+/* Tooltip(말풍선) 문자 */
+div.tooltip_pw, div.tooltip_pwCh {
+    position: relative;
+}
+.tooltip_pw .tooltiptext,
+.tooltip_pwCh .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #7fb069;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+}
+.tooltip_pw .tooltiptext {
+    /* 포지셔닝 */
+    position: absolute;
+    top: 0px;
+    right: -215px;
+    z-index: 10;
+}
+
+.tooltip_pwCh .tooltiptext {
+    /* 포지셔닝 */
+    position: absolute;
+    top: 0px;
+    right: -215px;
+    z-index: 10;
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* 이메일 input 설정 */
+div.email {
+    border: 1px solid #e8e8e8;
+    width: 265px;
+    padding: 0 1px;
+    line-height: 40px;
+    height: 43px;
+}
+input.email, select.domain {
+    border: none;
+    height: 40px;
+    line-height: 40px;
+}
+input.email {
+    font-size: 17px;
+    padding: 0 10px;
+    width: 100px;
+}
+select.domain{
+    font-size: 17px;
+    font-family: "one";
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* 지역 설정 */
+select.area1, select.area2 {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 17px;
+    border: 1px solid #e8e8e8;
+}
+
+/* 생산품목 설정 */
+select#selectUserInfo03 {
+    width: 115px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 17px;
+    border: 1px solid #e8e8e8;
+}
+input#inputItem {
+    width: 115px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 17px;
+    border: 1px solid #e8e8e8;
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* 버튼 */
+div.btn {
+    width: 100%;
+    text-align: center;
+    float: right;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+div.btn button {
+    line-height: 42px;
+    vertical-align: middle;
+    color: #ffffff;
+    margin-left: 3px;
+    float: right;
+    background-color: #8a8a8a;
+    border: 1px solid #8a8a8a;
+    border-radius: 50px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+div.btn button p {
+    width: 70px;
+    display: inline-block;
+    padding: 0 7px;
+}
+div.btn img {
+    width: 16.92px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+/* 휴대폰 번호 변경 */
+span.printPhone {
+    vertical-align: middle;
+    line-height: 43px;
+    margin-left: 5px;
+}
+input.changePhone, 
+input.sendNumber,
+input.submitBtn
+ {
+    width: 100px;
+    height: 43px;
+    float: right;
+    background-color: #ffffff;
+    border: 2px solid #7fb069;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'ONE-Mobile-Regular';
+}
+input.inputPhone,
+input.inputCertiNum {
+    border: 1px solid #e8e8e8;
+    width: 65%;
+    line-height: 40px;
+    height: 43px;
+    font-size: 17px;
+}
+
+input.inputPhone::placeholder,
+input.inputCertiNum::placeholder {
+    padding: 10px;
+    font-size: 14px;
+}
+
+
+
+div.test1, div.test2 {
+    display: block;
+    margin-top: 1px;
+}
+input.inputPhone,
+input.inputCertiNum {
+    padding-left: 10px;
+}
+input.inputPhone::placeholder,
+input.inputCertiNum::placeholder {
+    padding: 0;
+}
+
+.error_next_box {
+    display: block;
+    margin: 0px 0 -15px;
+    font-size: 12px;
+    line-height: 14px;
+    color: red;
+}
+.green { color: #08a600!important; }
+
+/* --------------------------------------------------------------- */
+/* 셀렉트 박스 */
+select {
+    width: 115px;
+    height: 40px;
+    appearance: none;
+    background-image: url('/assets/images/common/dropicon.png');
+    background-size: 30px 45px;
+    background-repeat: no-repeat;
+    background-position: right;
+    font-size: 14px;
+}
+select.domain {
+    padding-left: 10px;
+}
+select.domain,
+select#userInfo01,
+select#userInfo02,
+select#selectUserInfo03 {
+    font-size: 14px;
+}

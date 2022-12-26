@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cropsInfo">
+	
+	<select id="selectSearch" parameterType="map" resultType="cropsInfoVO">
+		select crops_number, crops_image, crops_name, crops_dev_year, crops_institution, crops_detail_name, crops_explain, crops_category, crops_kinds
+		from tbl_crops_info
+		order by crops_number desc
+		limit #{startRow}, #{rowCount}
+	</select>
+	
+	<!-- 작물정보 전체 개수 -->
+	<select id="selectCount" resultType="_int">
+		select count(crops_number) from tbl_crops_info
+	</select>
+</mapper>

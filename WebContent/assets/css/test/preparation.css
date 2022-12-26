@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+
+* { font-family: 'Noto Sans KR', sans-serif; }
+body { margin: 0; }
+
+ul {
+    list-style: none;
+    /* margin: 0;
+    padding: 0; */
+}
+
+a { text-decoration: none; }
+
+div#preparation-test { margin-bottom: 70px; }
+
+div.checklist{
+    margin-top: 30px !important;
+    border-top: 2px solid #565656;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #ababab;
+    border-left: 1px solid #e6e6e6;
+}
+
+div.main {
+    background: url('https://www.returnfarm.com:444/css/wvtex/img/sub/advi5_icon02.png') 50% 65px no-repeat;
+    padding: 260px 0 111px;
+    text-align: center;
+}
+
+/* 테스트 시작 화면 */
+div.checklist-wrap ul li.test-title {
+    font-size: 40px;
+    color: #323232;
+    font-weight: 600;
+    padding-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+div.checklist-wrap ul li.test-title>span{ color: #72a83b; }
+
+div.checklist-wrap ul li.test-text {
+    font-size: 20px;
+    color: #616161;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: -0.08em;
+    margin-bottom: 29px;
+}
+
+ul li button.test-start {
+    background: url('https://www.returnfarm.com:444/css/wvtex/img/sub/advi5_btnicon_01.png') 23px 8px no-repeat #ff7800;
+    padding: 9px 33px 12px 63px;
+    border: 0;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}

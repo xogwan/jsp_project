@@ -1,0 +1,881 @@
+
+
+/* @font-face {
+    font-family: "NanumSquare";
+    src: url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css") format("truetype");
+    font-weight: normal;
+} */
+
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font: 17px/1.5 "ONE-Mobile-Regular";
+    letter-spacing: -0.05em;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+/** HEADER */
+header.header {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+header.header .util_wrap {
+    width: 100%;
+    margin: auto;
+    font-size: 0.882rem;
+    border-bottom: 0.059rem solid #cecece;
+    overflow: hidden;
+}
+
+header.header .util_wrap .left_box {
+    float: left;
+}
+
+header.header .util_wrap .right_box {
+    float: right;
+}
+
+header.header .util_wrap .bg1 {
+    background: #006999;
+}
+
+header.header .util_wrap .bg2 {
+    background: #0a81b8;
+}
+
+header.header .util_wrap ul {
+    width: 13.529rem;
+    overflow: hidden;
+}
+
+header.header .util_wrap ul li {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+header.header .util_wrap ul li a {
+    display: block;
+    color: #fff;
+    line-height: 2.647rem;
+}
+
+header.header .util_wrap ul li a:hover,
+header.header .util_wrap ul li a:focus {
+    background: #333;
+    transition: all .2s;
+}
+
+header.header .logo_wrap {
+    width: 100%;
+    max-width: 82.353rem;
+    margin: auto;
+    height: 4.706rem;
+    line-height: 4.706rem;
+}
+
+header.header .logo_wrap .logo {
+    width: 14.706rem;
+    float: left;
+    height: 4.706rem;
+    line-height: 4.706rem;
+}
+
+header.header .logo_wrap .logo>a:focus {}
+
+header.header .logo_wrap .logo>a>img {
+    vertical-align: middle;
+}
+
+header.header .logo_wrap .gnb_wrap {
+    width: calc(100% - 15.882rem);
+    float: left;
+}
+
+/* header.header .logo_wrap .gnb_wrap:hover{
+	height: 300px;
+    width: 100%;
+    position: absolute;
+    background-color: #ccc;
+} */
+
+
+#lgr_headlogo {
+    display: none;
+}
+
+/* #lgr_login {
+    display: inline-block;
+    position: relative;
+    left: 1310px;
+    top: -90px;
+    font-size: 14px;
+    background-color: #464d77;
+    color: #fff;
+    width: 80px;
+    height: 22px;
+    padding-top: 3px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+#lgr_join {
+    display: inline-block;
+    position: relative;
+    left: 1325px;
+    top: -90px;
+    font-size: 14px;
+    background-color: #464d77;
+    color: #fff;
+    width: 80px;
+    height: 22px;
+    padding-top: 3px;
+    border-radius: 25px;
+    text-align: center;
+} */
+
+#lgr_topbtn {
+    position: fixed;
+    top: 700px;
+    right: 20px;
+}
+
+/** //HEADER */
+
+/** GNB */
+.gnb_wrap {}
+
+.gnb {
+    width: 100%;
+}
+
+.gnb>ul {
+    text-align: right;
+    margin-top: 0;
+}
+
+.gnb>ul>li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.gnb>ul>li>a {
+    display: block;
+    height: 4.706rem;
+    line-height: 4.706rem;
+    padding: 0 1.765rem;
+    font-size: 1.118rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.gnb>ul>li>a>span {
+    font-size: 1.059rem;
+    font-weight: bold;
+}
+
+.gnb>ul>li.on>a>span,
+.gnb>ul>li>a:hover>span,
+.gnb>ul>li>a:focus>span {
+    border-bottom: 0.118rem solid #006999;
+    padding-bottom: 0.294rem;
+    transition: all .2s;
+}
+
+.gnb>ul ul {
+    display: none;
+}
+
+.gnb li.on>ul {
+    display: block;
+}
+
+.gnb ul[data-level="2"] {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+    text-align: center;
+}
+
+/*.gnb ul[data-level="2"] {position:absolute; width:100%; top:136px; left:0; z-index:10; background:#fff; text-align:center; border-bottom:0.059rem solid #e8e8e8;}*/
+.gnb ul[data-level="2"]>li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.gnb ul[data-level="2"]>li>a {
+    display: block;
+    height: 2.353rem;
+    line-height: 2.353rem;
+    padding: 0 1.765rem;
+    font-size: 1rem;
+}
+
+.gnb ul[data-level="2"]>li>a>span {
+    font-size: 1rem;
+}
+
+.gnb ul[data-level="2"]>li>a:hover>span,
+.gnb ul[data-level="2"]>li>a:focus>span {
+    border-bottom: 0.118rem solid #006999;
+    padding-bottom: 0.294rem;
+    transition: all .2s;
+}
+
+/** //GNB */
+
+/* gnb 마우스 오버하면 나타나는 영역 생성 */
+.lgr_back{
+	display: none;
+	position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 360px;
+    background-color: #fff;
+}
+
+.lgr_background_f9f9f9{
+	background-color: #f9f9f9;
+	width: 100%;
+	height: 280px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.lgr_background_003668{
+	background-color: #003668;
+	width: 35.7%;
+	height: 280px;
+	border-bottom-right-radius: 60px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;
+}
+
+.lgr_backg_logo {
+    width: 35.7%;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    display: inline-block;
+}
+
+.lgr_gnbhead{
+	height: 80px !important;
+	line-height: 80px !important;
+}
+
+.lgr_gnbhead a{
+	font-size: 24px;
+	font-weight: bold;
+    text-decoration: none;
+    color: #333333;
+}
+
+.lgr_normal_link {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: -6rem;
+    width: 60%;
+    text-align: center;
+    margin-left: -2rem;
+}
+
+.lgr_normal_link ul {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    margin-left: 0%;
+    margin-right: 0%;
+    list-style: none;
+}
+
+.lgr_normal_link ul li{
+	width: 100%;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+	font-size: 16px;
+	color: #333333;
+    list-style: none;
+}
+
+.lgr_normal_link ul li a{
+    text-decoration: none;
+    color: #333333;
+}
+
+/* mouse hover시 효과 */
+.lgr_normal_link ul li a:hover{
+	color: #7fb069;
+	cursor: pointer;
+	transition: all ease .3s 0s;
+}
+
+
+
+body {
+    margin: 0;
+}
+.sub_title{
+    width: 100%;
+    background-image: url(https://www.rda.go.kr/young/file/imageView.do?fpath=78mfPU1tH5tpGdf2EjZQb0R3AXuZGhjU7I8pBv4Rl9tqEaXhOUrKyqO8iZWgudng&fname=l%2BFlhnD03GsJ%2Fchs5vcnWANjaPVA8jceO3zpgcD7G8yWklFi5FyBa5sbhA28X6QWCVj7vfrcTg1bL8qWZ5zq2A%3D%3D&fmime=Lg45aghPCGTl0b%2FVATARWg%3D%3D);
+    padding: 4.706rem 0 0;
+    z-index: 2;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    bottom: 5.353rem;
+    position: relative;
+    height: 17.353rem;
+}
+.container {
+    height: 100%;
+    max-width: 82.353rem;
+    margin: auto;
+    position: relative;
+}
+.sub_title .inner {
+    position: relative;
+    width: 100%;
+    height: 15.353em;
+    margin: 0 auto;
+}
+.title_left_box {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: relative;
+    width: 100%;
+}
+nav.snb{
+    display: block;
+}
+.snb .top{
+    letter-spacing: -0.05em;
+    line-height: normal;
+    font-weight: bold;
+    width: 210px;
+    font-size: 2.824rem;
+    color: #333;
+    /* margin-top: 2.941rem; */
+}
+ul.lgr_ul{
+    font-family: 'one';
+    list-style: none;
+}
+.sub_wrap .sub_title ul li{
+    list-style: none;
+    font-size: 0.882rem;
+}
+li.nowMenu{
+    float: left;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.941rem;
+}
+li.nowMenu::after{
+    content: '/';
+    margin: 0 1.176rem;
+    color: rgb(0,0,0,.5);
+}
+.lgr_ul li{
+    font-size: 0.941rem;
+    letter-spacing: -0.05em;
+}
+.secondMenu{
+    float: right;
+    color: rgb(0,0,0,.5);
+    font-size: 0.941rem;
+}
+.title_right_box {
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    vertical-align: top;
+}
+
+
+
+
+
+
+/* ↑-header============================================================================================================================ */
+/* ↑-header============================================================================================================================ */
+/* ↑-header============================================================================================================================ */
+/* ↑-header============================================================================================================================ */
+/* ↑-header============================================================================================================================ */
+/* ↑-header============================================================================================================================ */
+/* ↑-header============================================================================================================================ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font: 17px/1.5 "ONE-Mobile-Regular";
+    letter-spacing: -0.05em;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* -webkit-tap-highlight-color: transparent; */
+    font-size: inherit;
+}
+
+
+
+body, textarea, select, button, table {
+    font-size: 1em;
+    line-height: 1.25em;
+    font: 17px/1.5 "NanumSquare";
+    letter-spacing: -0.14em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+}
+
+input[type="text"], input[type="password"], input[type="number"], input[type="search"] {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input {
+    line-height: normal;
+    vertical-align: middle;
+    color: inherit;
+    font: inherit;
+}
+
+
+
+
+#site_main {
+    text-align: center;
+}
+
+section.login {
+    position: relative;
+    min-height: calc(100vh - 295px);
+    width: 100%;
+}
+
+.sub_title {
+    padding: 4.706rem 0 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: url(https://www.rda.go.kr/young/images/site/login/sub06_img_bg.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    bottom: 5.353rem;
+    height: 22.353rem;
+}
+
+.sub_title > .container {
+    height: 100%;
+}
+
+.container {
+    max-width: 82.353rem;
+}
+
+.container {
+    margin: auto;
+    position: relative;
+}
+
+.sub_title .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.sub_title .inner > .title_left_box {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: absolute;
+    left: 0;
+}
+
+.snb .top {
+    line-height: normal;
+    font-weight: bold;
+    font-size: 2.824rem;
+    color: #333;
+    margin-top: 2.941rem;
+}
+
+.sub_title .inner > .title_right_box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    vertical-align: top;
+    margin-top: 1.176rem;
+}
+
+.sub_title .inner > .title_right_box > img {
+    display: block;
+}
+
+
+
+/* ↑ 위쪽까지가 로그인 위쪽 부분(헤더 바로 아래부분) ===============*/
+
+.login_box {
+    margin: auto;
+    margin-bottom: 100px;
+    width: 520px;
+    width: 600px;
+    background: #fff;
+}
+
+#lgr_top_wrap {
+    border-bottom: solid 2px #333;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+#lgr_topimg_wrap {
+    width: 100%;
+    display: inline-block;
+}
+
+#lgr_top_wrap img {
+    margin-right: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0 none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#lgr_toptext_box {
+    text-align: left;
+    display: inline-block;
+}
+
+#lgr_toptext_title {
+    wdith: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#lgr_mobbr {
+    display: none;
+}
+
+#lgr_toptext_sub {
+    font-size: 18px;
+    color: #46733f;
+}
+
+
+/* ↑ 로그인 위에 문구 부분 위쪽 css ============================== */
+
+.login_input {
+    position: relative;
+    width: 600px;
+    border-left: none;
+    text-align: left;
+}
+
+.login_input input {
+    width: 100%;
+    height: 80px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    display: inline-block;
+    letter-spacing: -0.14em;
+}
+
+.login_input img {
+    float: right;
+    margin-top: 30px;
+    position: absolute;
+    left: 550px;
+}
+
+.login_input img {
+    display: inline-block;
+}
+
+#lgr_login_idinput img:last-child {
+    display: none;
+}
+
+
+
+
+/* ↑ 위쪽까지가 아이디 부분 css===================================== */
+
+
+#lgr_login_pwinput img:last-child {
+    display: none;
+}
+
+
+/* ↑ 위쪽까지가 비밀번호 부분 css===================================== */
+
+
+
+#lgr_idrem_wrap {
+    text-align: left;
+}
+
+#lgr_idrem_wrap input {
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+input:read-only {
+    background-color: #f6f6f6;
+}
+
+#lgr_idrem_wrap div {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333333;
+}
+
+label {
+    cursor: default;
+}
+
+
+/* ↑ 위쪽까지가 휴대폰 저장 관련 (checkbox) css ===========================*/
+
+.login_btn a:hover {
+    border: solid 1px #46733f;
+    color: #fff;
+    background-color: #46733f;
+}
+
+.login_btn {
+    margin: auto;
+    height: 80px;
+    text-align: center;
+}
+
+.login_btn a {
+    width: 100%;
+    background-color: #fff;
+    line-height: 80px;
+    height: 80px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    border: 1px solid #333;
+}
+
+a:link, a:hover, a:active, a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+.button:hover, .button:focus {
+    background: #fff;
+    border: 1px outset #ccc;
+    color: #333;
+    transition: all .2s;
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 20%);
+}
+
+.button {
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    color: #fff;
+    background: #aaa;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+
+/* ↑ 위쪽까지가 로그인 버튼 부분 =========================================*/
+
+
+.user_btn ul {
+    overflow: hidden;
+    text-align: center;
+}
+
+dl, ul, ol, menu, li {
+    list-style: none;
+}
+
+.user_btn ul li {
+    margin-top: 70px;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 18px;
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    color: inherit;
+}
+
+.lgr_vertical_line {
+    width: 0px;
+    height: 17px;
+    border-left: solid 2px #ccc;
+}
+
+/* ↑ 위쪽까지가 회원가입 비밀번호 찾기 부분 ======================== */
+/* 여기 아래부터느 footer ============================================================================================================ */
+/* 여기 아래부터느 footer ============================================================================================================ */
+/* 여기 아래부터느 footer ============================================================================================================ */
+/* 여기 아래부터느 footer ============================================================================================================ */
+
+
+/** FOOTER */
+
+body {
+    margin: 0;
+}
+footer.footer {
+    width: 100%;
+    overflow: hidden;
+    background-color: #3b6a39;
+}
+
+footer.footer .bottom_link {
+    width: 82.353rem;
+    text-align: left;
+    border-bottom: 0.059rem solid rgba(255, 225, 225, 0.2);
+    padding: 1.176rem 0;
+    margin: auto;
+}
+
+footer.footer .bottom_link ul {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-top: 3px;
+}
+
+footer.footer .bottom_link ul li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+footer.footer .bottom_link ul li+li::before {
+    content: '|';
+    margin: 0 0.882rem;
+    color: #fff;
+}
+
+footer.footer .bottom_link ul li a {
+    font-family: 'ONE-Mobile-Regular';
+    font-size: 0.824rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer.footer .address {
+    width: 82.353rem;
+    position: relative;
+    padding: 1.471rem 0;
+    margin: auto;
+}
+
+footer.footer .address ul {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+footer.footer .address ul li {
+    float: left;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    font-size: 0.824rem;
+    color: #fff;
+    font-family: 'ONE-Mobile-Regular';
+}
+
+footer.footer .address ul li + li {
+    margin-left: 10px;
+}
+
+footer.footer .address p.copy {
+    font-size: 0.824rem;
+    color: #fff;
+    font-family: 'Play', sans-serif;
+    margin: 0;
+    padding-top: 4px;
+}
+
+footer.footer .bottom_link .logo {
+    width: 7.412rem;
+    height: 1.765rem;
+    left: 0;
+    position: relative;
+    display: inline-block;
+}
+
+footer.footer .bottom_link .container {
+    margin: 0;
+    max-width: 82.353rem;
+    position: relative;
+}
+
+footer.footer .address .container {
+    margin: 0;
+}

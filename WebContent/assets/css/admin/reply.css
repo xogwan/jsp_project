@@ -1,0 +1,19 @@
+div.contents-bottom {
+    position: relative;
+}
+
+div#container .chart-no {
+    margin-top: 95px;
+}
+
+th.num { width: 9%; }
+th.content { width: 50%; }
+th.id { width: 12%; }
+th.date { width: 13%; }
+th.boardNum { width:  10%; }
+th.delete { width: 6%; }
+
+td.delete { padding: 0 0.3vw; }
+
+td.delete input[type="button"] { background: #f5c7bd; }
+td.delete input[type="button"]:hover { background: #eeb6aa; }

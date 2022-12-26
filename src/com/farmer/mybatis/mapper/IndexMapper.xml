@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Index">
+	<select id="selectAll" parameterType="map" resultType="programVO">
+		select program_number, program_location, program_name, program_apply_start_date, program_apply_end_date
+		from tbl_program
+		order by program_number desc
+		limit 0, 8
+	</select>
+</mapper>

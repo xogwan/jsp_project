@@ -1,0 +1,298 @@
+@charset "UTF-8";
+
+/* css 초기 설정 */
+* { padding: 0; margin: 0; }
+ul, ol { list-style: none; }
+a { text-decoration: none; color: #4a4a4a;}
+body {font-family: 'Noto Sans KR', sans-serif;}
+
+/* ----------------------------- */
+@font-face {
+    font-family: "one";
+    src: url("fonts/본문체/ONE\ Mobile\ Regular.ttf") format("truetype");
+    font-weight: 100;
+}
+
+/* CSS 초기설정 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+body {
+    font: 17px/1.5;
+    font-family: "one";
+}
+
+
+/* ------------------------------------------------------------------ */
+div.wrap {
+    width: 100%;
+}
+
+
+/* 네비게이션바 아래 title */
+div.sub_title {
+    background-color: antiquewhite;
+    background-image: url("https://www.rda.go.kr/young/file/imageView.do?fpath=78mfPU1tH5tpGdf2EjZQb0R3AXuZGhjU7I8pBv4Rl9tqEaXhOUrKyqO8iZWgudng&fname=CwpuoJHL%2FKLc0%2BUEvvptYk3Doye33FfKkrZOai5V4eyfJpwkcUEvM%2Bk1GaKR5UCwCQ2OQHfSCOCioOTsdp1yYw%3D%3D&fmime=Lg45aghPCGTl0b%2FVATARWg%3D%3D");
+    padding: 4.706rem 0 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    bottom: 5.353rem;
+    height: 18.253rem
+}
+
+/* 큰 틀 사이즈 */
+div.sub_title .container {
+    max-width: 82.353rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 글자,아이콘,이미지 넣을 div */
+div.sub_title .container .inner {
+    width: 100%;
+    height: 15.353em;
+    position: relative;
+}
+
+/* 마이페이지 글씨 */
+div.left_font {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: relative;
+    width: 100%;
+}
+
+div.mypage .top {
+    display: inline-block;
+    line-height: normal;
+    font-weight: bold;
+    width: 351px;
+    font-size: 2.824rem;
+    color: #333;
+}
+
+
+/* 일러스트 설정 */
+.title_right_box {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    vertical-align: top;
+    display: inline-block;
+}
+.title_right_box img {
+    display: block;
+}
+div.title_right_box div.communityImg {
+    width: 362px;
+    height: 229px;
+    background-image: url(/assets/images/myWriting/community.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* --------------------------- */
+div.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+
+/* 입력 외곽부분 */
+div.searchOut {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+div.searchInner {
+    padding: 13px 20px;
+    border: 1px solid #e6e6e6;
+    background-color: #fbfbfb;
+    height: 50px;
+}
+
+/* --------------------------- */
+/* select Box */
+span.selectBox {
+    position: relative;
+    float: left;
+    width: 185px;
+    margin-right: -185px;
+}
+span.selectDrop {
+    display: block;
+}
+select.selectChoice {
+    width: 100%;
+    height: 41px;
+    padding: 8px;
+    appearance: none;
+    background-image: url('/assets/images/common/dropicon.png');
+    background-size: 30px 45px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+select.selectChoice option {
+    display: block;
+    padding: 0 2px 1px;
+}
+
+/* --------------------------- */
+/* 검색(input) */
+span.inputLine {
+    margin-right: -44px;
+    float: left;
+    width: 100%;
+}
+span.inputBox {
+    margin-left: 185px;
+    display: block;
+    margin-right: 44px;
+    padding: 0 25px 0 1px;
+}
+input.searchBox {
+    width: 100%;
+    height: 37px;
+    margin: 0 -24px 0 0;
+    
+    padding: 0 12px;
+}
+
+/* --------------------------- */
+/* 검색 버튼 */
+span.submit {
+    float: left;
+    width: 44px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+button.submitBtn {
+    width: 100%;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    height: 41px;
+    color: #fff;
+    line-height: 41px;
+    text-align: center;
+    background-image: url("/assets/images/myWriting/mypage_search.png");
+    background-size: cover;
+}
+
+
+/* 공동 처리 */
+input.searchBox, span.inputBox, select.selectChoice, button.submitBtn {
+    border: 1px solid #d9d9d9;
+    color: #7b7b7b;
+}
+
+/* --------------------------- */
+/* 총 건수 */
+p.countText img {
+    margin-right: 5px;
+}
+p.countText {
+    font-size: 13.5px;
+    padding: 0 0 5px 18px;
+    float: right;
+    color: #666666;
+    letter-spacing: -0.03em;
+}
+
+/* --------------------------- */
+/* 검색 리스트 */
+form.searchForm {
+    border-top: 2px solid black;
+}
+div.boardList {
+    width: 100%;
+    clear: both;
+    border-top: 2px solid #565656;
+    border-bottom: 1px solid #ababab;
+    font-size: 13px;
+    font-weight: 400;
+    color: #3d3d3d;
+}
+table.boardTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.boardTable th:first-child {
+    border-left: 1px solid #e8e6e6;
+}
+
+table.boardTable tr th{
+    padding: 12px 0;
+    border-right: 1px solid #e8e6e6;
+    border-top: 2px solid #565656;
+    
+}
+table.boardTable tr .number, .icon, .writer, .date, .viewCnt {
+    text-align: center;
+    padding: 11px 0 11px 0;
+}
+table.boardTable tr td.title {
+    padding-left: 10px;
+}
+
+table.boardTable tr td {
+    font-size: 14px;
+}
+
+
+
+
+
+/* 페이지 버튼 */
+.paging {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+.page_btn.current_page {
+    border-color: #628861;
+    background: #628861;
+}
+.page_btn.current_page span {
+    color: #fff !important;
+}
+.page_btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #666;
+}
+button {
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    overflow: visible;
+    cursor: pointer;    
+}

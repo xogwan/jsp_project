@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+
+body{
+    margin: 0;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font: 17px/1.5 "ONE-Mobile-Regular";
+    letter-spacing: -0.05em;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: inherit;
+    font-weight: 300;
+}
+
+.contentfullwrap {
+    position: relative;
+    width: 100%;
+    
+}
+
+.contentwrap {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.pagetitle {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    letter-spacing: -0.08em;
+}
+
+.base_boardwrap {
+    clear: both;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.base_boardwrap table {
+    width: 100%;
+    font-weight: 300;
+}
+
+
+
+table.brdTline02 {
+    border-top: 2px solid #565656;
+}
+
+
+.base_boardwrite02 table tbody tr th {
+    font-size: 14px;
+    color: #262525;
+    font-weight: 500;
+    text-align: left;
+    background-color: #fbfbfb;
+    padding: 5px 10px 5px 15px;
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.base_boardwrite02 table tbody tr td {
+    font-size: 14px;
+    color: #4a4a4a;
+    font-weight: 400;
+    text-align: left;
+    background: #ffffff;
+    padding: 5px 10px 5px 15px;
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+    vertical-align: middle;
+    min-height: 52px;
+}
+
+textarea.textarea100, td textarea.textarea100 {
+    width: 98%;
+    height: 400px;
+    white-space: pre;
+    font-size: 14px;
+    color: #5b5b5b;
+    line-height: 24px;
+    text-align: left;
+}
+
+.iron-input-note .content {
+    display: block;
+    padding: 0 13px;
+}
+
+.iron-input-note .val {
+    width: 101%;
+    margin: 0 -13px;
+}
+
+input {
+    border: 1px solid #d9d9d9;
+    color: #7b7b7b;
+    width: 75%;
+    padding: 0 12px;
+    vertical-align: middle;
+    height: 38px;
+}
+
+input[type="text"]{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    width: 100%;
+    }
+
+div.fileInfo {
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    background: #403f3f url('https://www.returnfarm.com:444/css/wvtex/img/uploadBtn.png') no-repeat;
+    border: none;
+    overflow: hidden;
+}
+
+div.fileInfo input {
+    display: block !important;
+    width: 120px !important;
+    height: 30px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+
+.attchtext {
+    font-size: 12px;
+    color: #868686;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+span.tbl_lineb {
+    border-bottom: 1px solid #a5a4a4;
+    height: 1px;
+    width: 100%;
+    display: block;
+}
+
+.te_right {
+    text-align: right;
+}
+
+.iron-action {
+    position: relative;
+    display: inline-block;
+    padding: 0 30px;
+    color: #FFF;
+    font-size: 16px;
+    line-height: 41px;
+    text-align: center;
+}
+
+.iron-action.featured {
+    padding-left: 64px;
+}
+
+.iron-action.primary {
+    display: inline-block;
+    color: #ffffff;
+    background: #464d77;
+    border-radius: 20px;
+    padding: 0px 15px;
+    font-size: 16px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+

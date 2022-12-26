@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font: 17px/1.5 "ONE-Mobile-Regular";
+    letter-spacing: -0.05em;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+a { text-decoration: none; }
+
+.sub_title{
+    width: 100%;
+    background-image: url(https://www.rda.go.kr/young/file/imageView.do?fpath=78mfPU1tH5tpGdf2EjZQb0R3AXuZGhjU7I8pBv4Rl9tqEaXhOUrKyqO8iZWgudng&fname=3Yhidi6uci2svReb6yH2fn%2FNCCJ1B2ad2%2BU32UOCd8pWSv8Igj8WOJYku7BlBnbuIoJc07AnYr3VL%2F7qzMzAXw%3D%3D&fmime=Lg45aghPCGTl0b%2FVATARWg%3D%3D);
+    padding: 4.706rem 0 0;
+    z-index: 2;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    bottom: 6.353rem;
+    position: relative;
+    height: 17.353rem;
+}
+.container {
+    height: 100%;
+    max-width: 82.353rem;
+    margin: auto;
+    position: relative;
+}
+.sub_title .inner {
+    position: relative;
+    width: 100%;
+    height: 15.353em;
+    margin: 0 auto;
+}
+.title_left_box {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.529rem;
+    position: relative;
+    width: 100%;
+}
+nav.snb{
+    display: block;
+}
+.snb .top{
+    letter-spacing: -0.05em;
+    line-height: normal;
+    font-weight: bold;
+    width: 210px;
+    font-size: 2.824rem;
+    color: #333;
+    /* margin-top: 2.941rem; */
+}
+ul.lgr_ul{
+    font-family: 'one';
+    list-style: none;
+}
+
+ul.lgr_ul li { float: left; }
+
+.sub_wrap .sub_title ul li{
+    list-style: none;
+    font-size: 0.882rem;
+}
+li.nowMenu a {
+    color: #333;
+    font-weight: 600;
+    font-size: 0.941rem;
+}
+.lgr_ul li{
+    font-size: 0.941rem;
+    letter-spacing: -0.05em;
+}
+
+.subMenu a {
+    color: rgb(0,0,0,.5);
+    font-size: 0.941rem;
+}
+
+.title_right_box {
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    vertical-align: top;
+}
+
+/* 여기까지 헤더 */
+
+/* 바디 */
+.search{
+    width: 62.353rem;
+    margin: 0 auto;
+    padding: 19px 24px 51px 24px;
+    border-radius: 8px;
+    background-color: #f1f7fc;;
+    height: 32px;
+    position: relative;
+    margin-bottom: 81px;
+
+}
+.first{
+    float: left;
+    padding: 0 6px;
+}
+.search_title{
+    padding-left: 27px;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 11px;
+}
+.search_title::before{
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 19px;
+    height: 17px;
+    margin-right: 4px;
+    top: 2px;
+    left: 0;
+    background: url(https://www.dooinauction.com/wp-content/themes/dooin-rd/extend/framework/assets/images/icon/icon_main_case_number.png);
+}
+.input_group{
+    padding-right: 0px;
+    border-radius: 4px 0px 0px 4px;
+}
+#kindName{
+    width: 120px;
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 4px 0px 0px 4px;
+    border: 1px solid #e3e3e3;
+    font: 13px "NotoSansKR";
+}
+.second{
+    float: left;
+    margin-left: 140px;
+    
+}
+.last{
+    float: left;
+    margin-left: 140px;
+}
+.search_button{
+    width: 52px;
+    height: 52px;
+    border-radius: 6px;
+    border: none;
+    background-image: url(https://www.dooinauction.com/wp-content/themes/dooin-rd/extend/framework/assets/images/icon/icon_main_combine_search.png);
+    background-color: #249af3;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 4px;
+    margin-left: 20px;
+    position: absolute;
+    right: 24px;
+    cursor: pointer;
+    
+}
+.grid_topLine{
+    border-top: 2px solid #7e7e7e;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+}
+.table_wrap{
+    margin-top: 50px;
+}
+tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.grid_topLine th{
+    border: 1px solid #e8e8e8;
+    background: #f3f4f5;
+    color: #585858;
+    padding: 5px 3px;
+    font-size: 18px;
+    line-height: 1.3;
+}
+.grid_topLine td{
+    border: 1px solid #e8e8e8;
+    padding: 5px;
+    color: #585858;
+    background: #ffffff;
+}
+.checkText{
+    color: #333;
+    font-weight: 600;
+}
+
+ul.lgr_ul{
+    font-family: 'one';
+    list-style: none;
+    display: table;
+}
+
+ul.lgr_ul li{
+    display: table-cell;
+    color: rgb(0,0,0,.5);
+}
+
+li.after_slash::after{
+    content: '/';
+    margin: 0 1.176rem;
+    color: rgb(0,0,0,.5);
+}
+.dropbox_height{
+    height: 25px;
+}

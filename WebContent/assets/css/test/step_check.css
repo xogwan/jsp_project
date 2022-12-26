@@ -1,0 +1,121 @@
+body { margin: 0; }
+
+a {
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.checklist-wrap {
+    position: relative;
+    width: 100%;
+}
+
+div.checklist {
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+div.checklist span.title {
+    margin-top: 30px !important;
+    
+    font-size: 20px;
+    color: #323232;
+    font-weight: 500;
+    display: block;
+    padding: 21px 0 4px 8px;
+    border-top: 2px solid #565656;
+}
+
+.checklist strong { color: #539411; }
+
+.checklist span.title-sub {
+    font-size: 14px;
+    color: #797979;
+    font-weight: 400;
+    line-height: 19px;
+    display: block;
+    padding-bottom: 15px;
+}
+
+.checklist div.check-wrap {
+    clear: both;
+    overflow-x: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+div.check-wrap table {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    border-spacing: 0;
+    word-break:keep-all;
+}
+
+table.table-wrap { width: 100%; }
+
+table.table-wrap thead {
+    font-size: 13px;
+    font-weight: 400;
+    color: #3d3d3d;
+    border-top: 1px solid #565656;
+    border-bottom: 1px solid #ababab;
+}
+
+table.table-wrap thead th {
+    padding: 10px 0;
+    border-right: 1px solid #e8e6e6;
+    border-left: 1px solid #e8e6e6;
+    background-color: #fbfbfb;
+    
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: 500;
+    color: #262525;
+}
+
+table.table-wrap tbody td {
+    padding: 11px 0;
+    border-bottom: 1px solid #ebe9e9;
+    vertical-align: middle;
+
+    text-align: center;
+    line-height: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #4a4a4a;
+    letter-spacing: -0.01em;
+}
+
+table.table-wrap tbody td.td-step {
+    padding-left: 10px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 18px;
+    color: #6b6b6b;
+}
+
+.check-radios {
+    display: inline;
+    width: 20px !important;
+    height: 20px !important;
+    padding: 0px;
+    border: 1px solid #d9d9d9;
+    vertical-align: middle;
+    color: #7b7b7b;
+}
+
+.table-wrap tbody tr:nth-last-child(2), tr:last-child td {
+    background-color: #fbf5ed;
+}
+
+@media screen and (max-width: 1140px) and (min-width: 741px) {
+    div.checklist {
+        width: auto;
+        margin: 0px 20px;
+    }
+}
+@media screen and (max-width: 740px) {
+    div.checklist { padding: 0 10px; }
+}
