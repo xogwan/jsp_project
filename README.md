@@ -14,6 +14,9 @@
 ## 프로젝트 사용 툴
 <img width="1169" alt="스크린샷 2023-01-01 오전 12 44 40" src="https://user-images.githubusercontent.com/114145422/210148593-e3da2da9-bcfd-40d2-acf6-37ca427740d3.png">
 
+## ERD
+![FD](https://user-images.githubusercontent.com/114145422/210203229-116b279e-666a-4872-885b-99a5071a9e58.png)
+
 ## 프로젝트에서 맡은 업무
 ▶︎ 회원가입, 로그인, 로그아웃, 아이디찾기<br><br>
     • CoolSms API를 활용해 홈페이지 회원가입<br>
